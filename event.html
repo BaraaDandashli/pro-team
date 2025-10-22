@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تفاصيل الفعالية - دليل فعاليات المدينة</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Google Fonts - Arabic -->
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+    <!-- Header with Navbar -->
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="index.html">
+                    <strong>🎉 دليل فعاليات المدينة</strong>
+                </a>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-label="القائمة">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link" href="index.html">الرئيسية</a></li>
+                        <li class="nav-item"><a class="nav-link" href="events.html">كل الفعاليات</a></li>
+                        <li class="nav-item"><a class="nav-link" href="about.html">عن الدليل</a></li>
+                        <li class="nav-item"><a class="nav-link" href="contact.html">اتصل بنا</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Event Header Section -->
+        <section class="event-header py-5 bg-light">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8">
+                        <span class="badge bg-danger mb-3">موسيقى</span>
+                        <h1>مهرجان الموسيقى الصيفي</h1>
+                        <p class="lead">استمتع بأجمل الأمسيات الموسيقية مع فنانين محليين ودوليين</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Event Details Section -->
+        <section class="event-details py-5">
+            <div class="container">
+                <div class="row">
+                    <!-- Main Content Column -->
+                    <div class="col-lg-8">
+                        <img src="assets/img/Main/music_event.jpeg" class="img-fluid rounded mb-4" alt="مهرجان الموسيقى">
+
+                        <h3>عن الفعالية</h3>
+                        <p>يعتبر مهرجان الموسيقى الصيفي من أكبر الفعاليات الموسيقية في المدينة...</p>
+
+                        <h3 class="mt-4">معرض الصور</h3>
+                        <div class="row mb-4">
+                            <div class="col-md-4 mb-3">
+                                <img src="assets/img/Main/music_event.jpeg" class="img-fluid rounded" alt="صورة 1">
+                            </div>
+                            <div class="col-md-4 mb-3">
+                                <img src="assets/img/Main/music_event.jpeg" class="img-fluid rounded" alt="صورة 2">
+                            </div>
+                            <div class="col-md-4 mb-3">
+                                <img src="assets/img/Main/music_event.jpeg" class="img-fluid rounded" alt="صورة 3">
+                            </div>
+                        </div>
+
+                        <h3>برنامج الفعالية</h3>
+                        <ul>
+                            <li>5:00 مساءً - افتتاح الأبواب</li>
+                            <li>6:00 مساءً - عرض الفرقة الافتتاحية</li>
+                            <li>7:30 مساءً - استراحة</li>
+                            <li>8:00 مساءً - العرض الرئيسي</li>
+                            <li>10:00 مساءً - اختتام الفعالية</li>
+                        </ul>
+                    </div>
+
+                    <!-- Sidebar -->
+                    <div class="col-lg-4">
+                        <div class="card mb-4">
+                            <div class="card-body">
+                                <h5 class="card-title">معلومات الفعالية</h5>
+                                <p><strong>📅 التاريخ:</strong> الجمعة، 25 أكتوبر 2025</p>
+                                <p><strong>🕐 الوقت:</strong> 5:00 مساءً - 10:00 مساءً</p>
+                                <p><strong>📍 المكان:</strong> مسرح المدينة الكبير</p>
+                                <p><strong>💰 السعر:</strong> 50 ريال - 150 ريال</p>
+                                <p><strong>👥 عدد المقاعد:</strong> 500 مقعد</p>
+
+                                <button class="btn btn-primary w-100 mb-2" data-bs-toggle="modal" data-bs-target="#bookingModal">احجز الآن</button>
+                                <button class="btn btn-outline-primary w-100 mb-2" id="addToCalendar">أضف للتقويم</button>
+                                <button class="btn btn-outline-secondary w-100" id="shareEvent">شارك الفعالية</button>
+                            </div>
+                        </div>
+
+                        <div class="card mb-4">
+                            <div class="card-body">
+                                <h5 class="card-title">الموقع على الخريطة</h5>
+                                <img src="assets/img/Main/music_event.jpeg" class="img-fluid rounded" alt="خريطة">
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">المنظم</h5>
+                                <p><strong>مؤسسة الفنون الموسيقية</strong></p>
+                                <p>📧 music@cityevents.com</p>
+                                <p>📞 123-456-7890</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Related Events -->
+        <section class="related-events py-5 bg-light">
+            <div class="container">
+                <h3 class="mb-4">فعاليات ذات صلة</h3>
+                <div class="row">
+                    <div class="col-md-4 mb-4">
+                        <div class="card h-100">
+                            <img src="assets/img/Main/music_event.jpeg" class="card-img-top" alt="حفل موسيقي">
+                            <div class="card-body">
+                                <span class="badge bg-danger mb-2">موسيقى</span>
+                                <h5 class="card-title">حفل موسيقي مباشر</h5>
+                                <p>📅 الثلاثاء، 23 أكتوبر 2025</p>
+                                <p>📍 وسط المدينة</p>
+                                <a href="event.html" class="btn btn-primary btn-sm">التفاصيل</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4 mb-4">
+                        <div class="card h-100">
+                            <img src="assets/img/Main/music_event.jpeg" class="card-img-top" alt="أمسية شعرية">
+                            <div class="card-body">
+                                <span class="badge bg-primary mb-2">ثقافة</span>
+                                <h5 class="card-title">أمسية شعرية</h5>
+                                <p>📅 الأربعاء، 24 أكتوبر 2025</p>
+                                <p>📍 المركز الثقافي</p>
+                                <a href="event.html" class="btn btn-primary btn-sm">التفاصيل</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4 mb-4">
+                        <div class="card h-100">
+                            <img src="assets/img/Main/music_event.jpeg" class="card-img-top" alt="ورشة موسيقية">
+                            <div class="card-body">
+                                <span class="badge bg-danger mb-2">موسيقى</span>
+                                <h5 class="card-title">ورشة تعليم الموسيقى</h5>
+                                <p>📅 الخميس، 26 أكتوبر 2025</p>
+                                <p>📍 معهد الموسيقى</p>
+                                <a href="event.html" class="btn btn-primary btn-sm">التفاصيل</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-4">
+        <div class="container text-center">
+            <p>&copy; 2025 دليل فعاليات المدينة. جميع الحقوق محفوظة.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

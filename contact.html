@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>اتصل بنا - دليل فعاليات المدينة</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Google Fonts - Arabic -->
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+    <!-- Header with Navbar -->
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="index.html">
+                    <strong>🎉 دليل فعاليات المدينة</strong>
+                </a>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-label="القائمة">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">الرئيسية</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="events.html">كل الفعاليات</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="about.html">عن الدليل</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="contact.html">اتصل بنا</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Page Header -->
+        <section class="page-header bg-primary text-white py-5">
+            <div class="container">
+                <h1 class="text-center">اتصل بنا</h1>
+                <p class="text-center lead">نحن هنا للإجابة على استفساراتك ومساعدتك</p>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="contact-section py-5">
+            <div class="container">
+                <div class="row">
+                    <!-- Contact Form -->
+                    <div class="col-lg-7 mb-4">
+                        <div class="card">
+                            <div class="card-body">
+                                <h3 class="mb-4">أرسل لنا رسالة</h3>
+
+                                <!-- Alert Container for Form Messages -->
+                                <div id="formAlerts"></div>
+
+                                <form id="contactForm">
+                                    <!-- Name Field -->
+                                    <div class="mb-3">
+                                        <label for="name" class="form-label">الاسم الكامل <span class="text-danger">*</span></label>
+                                        <input type="text" class="form-control" id="name" name="name" required>
+                                        <div class="invalid-feedback">
+                                            الرجاء إدخال اسمك الكامل
+                                        </div>
+                                    </div>
+
+                                    <!-- Email Field -->
+                                    <div class="mb-3">
+                                        <label for="email" class="form-label">البريد الإلكتروني <span class="text-danger">*</span></label>
+                                        <input type="email" class="form-control" id="email" name="email" required>
+                                        <div class="invalid-feedback">
+                                            الرجاء إدخال بريد إلكتروني صحيح
+                                        </div>
+                                    </div>
+
+                                    <!-- Phone Field -->
+                                    <div class="mb-3">
+                                        <label for="phone" class="form-label">رقم الهاتف</label>
+                                        <input type="tel" class="form-control" id="phone" name="phone">
+                                    </div>
+
+                                    <!-- Subject Field -->
+                                    <div class="mb-3">
+                                        <label for="subject" class="form-label">الموضوع <span class="text-danger">*</span></label>
+                                        <select class="form-select" id="subject" name="subject" required>
+                                            <option value="">اختر الموضوع</option>
+                                            <option value="general">استفسار عام</option>
+                                            <option value="event">سؤال عن فعالية</option>
+                                            <option value="submit">تقديم فعالية جديدة</option>
+                                            <option value="partnership">فرص الشراكة</option>
+                                            <option value="technical">مشكلة تقنية</option>
+                                            <option value="other">أخرى</option>
+                                        </select>
+                                        <div class="invalid-feedback">
+                                            الرجاء اختيار موضوع الرسالة
+                                        </div>
+                                    </div>
+
+                                    <!-- Message Field -->
+                                    <div class="mb-3">
+                                        <label for="message" class="form-label">رسالتك <span class="text-danger">*</span></label>
+                                        <textarea class="form-control" id="message" name="message" rows="5" required></textarea>
+                                        <div class="invalid-feedback">
+                                            الرجاء كتابة رسالتك (على الأقل 10 أحرف)
+                                        </div>
+                                    </div>
+
+                                    <!-- Submit Button -->
+                                    <button type="submit" class="btn btn-primary btn-lg">
+                                        إرسال الرسالة
+                                    </button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Contact Information -->
+                    <div class="col-lg-5">
+                        <!-- Contact Info Card -->
+                        <div class="card mb-4">
+                            <div class="card-body">
+                                <h4 class="mb-4">معلومات التواصل</h4>
+
+                                <div class="contact-info-item mb-3">
+                                    <h5>📧 البريد الإلكتروني</h5>
+                                    <p>info@cityevents.com</p>
+                                    <p class="small text-muted">للاستفسارات العامة</p>
+                                </div>
+
+                                <hr>
+
+                                <div class="contact-info-item mb-3">
+                                    <h5>📞 الهاتف</h5>
+                                    <p>123-456-7890</p>
+                                    <p class="small text-muted">من السبت إلى الخميس، 9 صباحاً - 5 مساءً</p>
+                                </div>
+
+                                <hr>
+
+                                <div class="contact-info-item mb-3">
+                                    <h5>📍 العنوان</h5>
+                                    <p>شارع الثقافة، مبنى رقم 123<br>وسط المدينة، المملكة</p>
+                                </div>
+
+                                <hr>
+
+                                <div class="contact-info-item">
+                                    <h5>🕐 ساعات العمل</h5>
+                                    <p>السبت - الخميس: 9:00 ص - 5:00 م<br>الجمعة: مغلق</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Social Media Card -->
+                        <div class="card mb-4">
+                            <div class="card-body">
+                                <h4 class="mb-4">تابعنا على وسائل التواصل</h4>
+                                <div class="social-links-list">
+                                    <a href="#" class="btn btn-outline-primary w-100 mb-2">
+                                        📘 فيسبوك
+                                    </a>
+                                    <a href="#" class="btn btn-outline-info w-100 mb-2">
+                                        🐦 تويتر
+                                    </a>
+                                    <a href="#" class="btn btn-outline-danger w-100 mb-2">
+                                        📷 انستجرام
+                                    </a>
+                                    <a href="#" class="btn btn-outline-success w-100">
+                                        💬 واتساب
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Quick Links Card -->
+                        <div class="card">
+                            <div class="card-body">
+                                <h4 class="mb-3">روابط مفيدة</h4>
+                                <ul class="list-unstyled">
+                                    <li class="mb-2">
+                                        <a href="events.html">🎪 تصفح جميع الفعاليات</a>
+                                    </li>
+                                    <li class="mb-2">
+                                        <a href="about.html">ℹ️ عن الدليل</a>
+                                    </li>
+                                    <li class="mb-2">
+                                        <a href="#">❓ الأسئلة الشائعة</a>
+                                    </li>
+                                    <li class="mb-2">
+                                        <a href="#">📋 سياسة الخصوصية</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Map Section -->
+        <section class="map-section py-5 bg-light">
+            <div class="container">
+                <h3 class="text-center mb-4">موقعنا على الخريطة</h3>
+                <div class="map-container">
+                    <img src="https://via.placeholder.com/1200x400/6C757D/ffffff?text=خريطة+الموقع"
+                         class="img-fluid rounded" alt="خريطة الموقع">
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="faq-section py-5">
+            <div class="container">
+                <h3 class="text-center mb-5">الأسئلة الشائعة</h3>
+                <div class="row">
+                    <div class="col-lg-8 mx-auto">
+                        <div class="accordion" id="faqAccordion">
+                            <!-- FAQ Item 1 -->
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
+                                        كيف يمكنني تقديم فعالية جديدة؟
+                                    </button>
+                                </h2>
+                                <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+                                    <div class="accordion-body">
+                                        يمكنك تقديم فعالية جديدة من خلال التواصل معنا عبر نموذج الاتصال أو
+                                        البريد الإلكتروني. سنقوم بمراجعة طلبك والرد عليك خلال 24-48 ساعة.
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- FAQ Item 2 -->
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
+                                        هل الخدمة مجانية؟
+                                    </button>
+                                </h2>
+                                <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                    <div class="accordion-body">
+                                        نعم، تصفح الفعاليات والحصول على معلومات عنها مجاني بالكامل. بعض
+                                        الفعاليات قد تتطلب رسوم حضور يحددها المنظمون.
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- FAQ Item 3 -->
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
+                                        كيف يمكنني حجز تذكرة لفعالية؟
+                                    </button>
+                                </h2>
+                                <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                    <div class="accordion-body">
+                                        في صفحة تفاصيل كل فعالية، ستجد زر "احجز الآن" الذي سيوجهك إلى
+                                        نموذج الحجز. املأ المعلومات المطلوبة وسنرسل لك تفاصيل الحجز.
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- FAQ Item 4 -->
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4">
+                                        هل يمكنني إلغاء حجزي؟
+                                    </button>
+                                </h2>
+                                <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                    <div class="accordion-body">
+                                        نعم، يمكنك إلغاء حجزك قبل 48 ساعة من موعد الفعالية. للإلغاء،
+                                        تواصل معنا عبر البريد الإلكتروني أو الهاتف.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-3">
+                    <h5>معلومات التواصل</h5>
+                    <p>📧 البريد: info@cityevents.com</p>
+                    <p>📞 الهاتف: 123-456-7890</p>
+                </div>
+
+                <div class="col-md-4 mb-3">
+                    <h5>روابط سريعة</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="index.html" class="text-white">الرئيسية</a></li>
+                        <li><a href="events.html" class="text-white">كل الفعاليات</a></li>
+                        <li><a href="about.html" class="text-white">عن الدليل</a></li>
+                        <li><a href="contact.html" class="text-white">اتصل بنا</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-md-4 mb-3">
+                    <h5>تابعنا</h5>
+                    <div class="social-links">
+                        <a href="#" class="text-white me-3">فيسبوك</a>
+                        <a href="#" class="text-white me-3">تويتر</a>
+                        <a href="#" class="text-white">انستجرام</a>
+                    </div>
+                </div>
+            </div>
+
+            <hr class="bg-white">
+
+            <div class="text-center">
+                <p>&copy; 2025 دليل فعاليات المدينة. جميع الحقوق محفوظة.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Custom JavaScript -->
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
