@@ -359,3 +359,17 @@ body.dark-mode .proteam-btn {
 footer .text-muted {
   color: #ccc !important;
 }
+
+.carousel-item a.btn {
+  pointer-events: auto;
+  z-index: 2;
+  position: relative;
+}
+.carousel-item {
+  pointer-events: none;
+}
+
+.carousel-item .card,
+.carousel-item .card-body {
+  pointer-events: auto;
+}

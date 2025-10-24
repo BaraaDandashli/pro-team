@@ -377,4 +377,32 @@ function setupEventButtons() {
   }
 }
 
+document.addEventListener("DOMContentLoaded", function () {
+  const urlParams = new URLSearchParams(window.location.search);
+  const eventId = urlParams.get("id");
+
+  if (eventId && window.location.pathname.includes("event.html")) {
+    loadEventDetails(eventId);
+  }
+});
+
+function loadEventDetails(id) {
+  if (id === "music") {
+    document.querySelector("h1").textContent = "مهرجان الموسيقى الصيفي";
+  }
+  if (id === "art") {
+    document.querySelector("h1").textContent = "معرض الفن الحديث";
+  }
+  if (id === "music-festival") {
+    document.querySelector("h1").textContent = "مهرجان الموسيقى الصيفي";
+  }
+  if (id === "art-exhibition") {
+    document.querySelector("h1").textContent = "معرض الفن الحديث";
+  }
+  if (id === "football-match") {
+    document.querySelector("h1").textContent = "مباراة كرة القدم المحلية";
+  }
+}
+
+
 console.log("دليل فعاليات المدينة - BWP401");
