@@ -2,167 +2,461 @@
 
 /* الخط */
 body {
-    font-family: 'Cairo', sans-serif;
-    background-color: #f5f5f5;
+  font-family: "Cairo", sans-serif;
+  background-color: #f5f5f5;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* Dark Mode Styles */
+body.dark-mode {
+  background-color: #1a1a2e;
+  color: #e4e4e4;
+}
+
+body.dark-mode .navbar {
+  background-color: #16213e !important;
+}
+
+body.dark-mode .bg-primary {
+  background-color: #0f3460 !important;
+}
+
+body.dark-mode .bg-light {
+  background-color: #16213e !important;
+}
+
+body.dark-mode .card {
+  background-color: #0f3460;
+  color: #e4e4e4;
+  border: 1px solid #16213e;
+}
+
+body.dark-mode .card-title,
+body.dark-mode .card-text {
+  color: #e4e4e4;
+}
+
+body.dark-mode .form-control,
+body.dark-mode .form-select {
+  background-color: #16213e;
+  color: #e4e4e4;
+  border-color: #0f3460;
+}
+
+body.dark-mode .form-control:focus,
+body.dark-mode .form-select:focus {
+  background-color: #16213e;
+  color: #e4e4e4;
+  border-color: #e94560;
+}
+
+body.dark-mode footer {
+  background-color: #0f0f1e !important;
+}
+
+body.dark-mode .filter-section {
+  background-color: #16213e !important;
+}
+
+body.dark-mode .page-header {
+  background-color: #0f3460 !important;
+}
+
+body.dark-mode .accordion-item {
+  background-color: #0f3460;
+  border-color: #16213e;
+}
+
+body.dark-mode .accordion-button {
+  background-color: #16213e;
+  color: #e4e4e4;
+}
+
+body.dark-mode .accordion-button:not(.collapsed) {
+  background-color: #0f3460;
+  color: #e4e4e4;
+}
+
+body.dark-mode .accordion-body {
+  background-color: #0f3460;
+  color: #e4e4e4;
+}
+
+body.dark-mode .modal-content {
+  background-color: #16213e;
+  color: #e4e4e4;
+}
+
+body.dark-mode .modal-header {
+  border-color: #0f3460;
+}
+body {
+  padding-top: 50px;
+}
+
+body.dark-mode .modal-footer {
+  border-color: #0f3460;
+}
+
+body.dark-mode .btn-close {
+  filter: invert(1);
+}
+
+body.dark-mode .text-muted {
+  color: #a0a0a0 !important;
 }
 
 /* الألوان الأساسية */
 .bg-primary {
-    background-color: #0d6efd !important;
+  background-color: #0d6efd !important;
 }
 
 /* شريط التنقل */
 .navbar-brand {
-    font-size: 1.3rem;
-    font-weight: bold;
+  font-size: 1.3rem;
+  font-weight: bold;
 }
 
 .nav-link {
-    margin: 0 10px;
-    font-size: 1.05rem;
+  margin: 0 10px;
+  font-size: 1.05rem;
 }
 
 .nav-link:hover {
-    color: #ffd700 !important;
+  color: #ffd700 !important;
 }
 
 /* البطاقات */
 .card {
-    border: none;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-    border-radius: 8px;
-    transition: all 0.3s;
+  border: none;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  transition: all 0.3s;
 }
 
 .card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
 
 .card-img-top {
-    height: 200px;
-    object-fit: cover;
+  height: 400px;
+  object-fit: cover;
 }
 
 .card-title {
-    font-weight: 600;
-    color: #333;
+  font-weight: 600;
+  color: #333;
 }
 
 .card-text {
-    color: #666;
+  color: #666;
 }
 
 /* الأزرار */
 .btn {
-    border-radius: 5px;
-    padding: 8px 20px;
+  border-radius: 5px;
+  padding: 8px 20px;
 }
 
 .btn-primary {
-    background-color: #0d6efd;
-    border: none;
+  background-color: #0d6efd;
+  border: none;
 }
 
 .btn-primary:hover {
-    background-color: #0b5ed7;
+  background-color: #0b5ed7;
 }
 
 /* الشارات */
 .badge {
-    padding: 5px 12px;
-    font-size: 0.85rem;
+  padding: 5px 12px;
+  font-size: 0.85rem;
 }
 
 /* السلايدر */
 .carousel-item img {
-    height: 400px;
-    object-fit: cover;
+  height: 400px;
+  object-fit: cover;
 }
 
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
-    background-color: rgba(0,0,0,0.5);
-    border-radius: 50%;
-    padding: 15px;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 50%;
+  padding: 15px;
 }
 
 /* Footer */
 footer {
-    margin-top: 40px;
+  margin-top: 40px;
 }
 
 footer h5 {
-    color: #ffc107;
-    margin-bottom: 15px;
+  color: #ffc107;
+  margin-bottom: 15px;
 }
 
 footer a {
-    color: white;
-    text-decoration: none;
+  color: white;
+  text-decoration: none;
 }
 
 footer a:hover {
-    color: #ffc107;
+  color: #ffc107;
 }
 
 /* صفحة الفعاليات - الفلاتر */
 .filter-section {
-    background-color: #e9ecef;
+  background-color: #e9ecef;
 }
 
-.form-control, .form-select {
-    border-radius: 5px;
-    padding: 10px;
+.form-control,
+.form-select {
+  border-radius: 5px;
+  padding: 10px;
 }
 
 /* التصميم المتجاوب */
 @media (max-width: 768px) {
-    .card-img-top {
-        height: 180px;
-    }
+  .card-img-top {
+    height: 180px;
+  }
 
-    .navbar-brand {
-        font-size: 1.1rem;
-    }
+  .navbar-brand {
+    font-size: 1.1rem;
+  }
 }
 
 @media (max-width: 576px) {
-    .card-img-top {
-        height: 150px;
-    }
+  .card-img-top {
+    height: 150px;
+  }
 }
 
 /* تأثيرات إضافية */
 .page-header {
-    padding: 50px 0;
+  padding: 50px 0;
 }
 
 .category-btn {
-    margin: 5px;
+  margin: 5px;
 }
 
 /* النماذج */
 .form-label {
-    font-weight: 600;
-    margin-bottom: 5px;
+  font-weight: 600;
+  margin-bottom: 5px;
 }
 
 textarea {
-    resize: vertical;
+  resize: vertical;
 }
 
 .is-invalid {
-    border-color: #dc3545;
+  border-color: #dc3545;
 }
 
 .invalid-feedback {
-    color: #dc3545;
-    font-size: 0.9rem;
+  color: #dc3545;
+  font-size: 0.9rem;
 }
 
 /* الرسائل */
 .alert {
-    border-radius: 5px;
-    margin-bottom: 20px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+/* Theme Toggle Button */
+.theme-toggle {
+  background: none;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  color: white;
+  padding: 8px 15px;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 0.3s;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.theme-toggle:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-color: white;
+}
+
+body.dark-mode .theme-toggle {
+  border-color: #e94560;
+  color: #e94560;
+}
+
+body.dark-mode .theme-toggle:hover {
+  background-color: rgba(233, 69, 96, 0.1);
+}
+
+/* Language Switcher */
+.language-switcher {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.language-switcher .dropdown-toggle {
+  background: none;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  color: white;
+  padding: 8px 15px;
+  border-radius: 25px;
+}
+
+.language-switcher .dropdown-toggle:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-color: white;
+}
+
+body.dark-mode .language-switcher .dropdown-toggle {
+  border-color: #e94560;
+  color: #e94560;
+}
+
+body.dark-mode .language-switcher .dropdown-menu {
+  background-color: #16213e;
+  border-color: #0f3460;
+}
+
+body.dark-mode .language-switcher .dropdown-item {
+  color: #e4e4e4;
+}
+
+body.dark-mode .language-switcher .dropdown-item:hover {
+  background-color: #0f3460;
+}
+
+/* ProTeam Section */
+.proteam-section {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  padding: 60px 0;
+  margin-top: 80px;
+}
+
+body.dark-mode .proteam-section {
+  background: linear-gradient(135deg, #0f3460 0%, #16213e 100%);
+  border-top: 3px solid #e94560;
+}
+
+.proteam-card {
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 20px;
+  padding: 40px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  transition: transform 0.3s;
+}
+
+.proteam-card:hover {
+  transform: translateY(-10px);
+}
+
+body.dark-mode .proteam-card {
+  background: rgba(15, 52, 96, 0.95);
+  border: 2px solid #e94560;
+}
+
+.proteam-logo {
+  max-width: 250px;
+  height: auto;
+  margin-bottom: 25px;
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.2));
+}
+
+.proteam-title {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+body.dark-mode .proteam-title {
+  color: #e94560;
+}
+
+.proteam-description {
+  font-size: 1.1rem;
+  color: #666;
+  margin-bottom: 25px;
+}
+
+body.dark-mode .proteam-description {
+  color: #e4e4e4;
+}
+
+.proteam-btn {
+  display: inline-block;
+  padding: 15px 40px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  text-decoration: none;
+  border-radius: 30px;
+  font-weight: bold;
+  font-size: 1.1rem;
+  transition: all 0.3s;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.proteam-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+  color: white;
+}
+
+body.dark-mode .proteam-btn {
+  background: linear-gradient(135deg, #e94560 0%, #0f3460 100%);
+}
+
+/* Improved Footer */
+footer {
+  margin-top: 0;
+}
+
+.footer-col h5 {
+  position: relative;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+}
+
+.footer-col h5::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 50px;
+  height: 3px;
+  background: #ffc107;
+}
+
+.footer-social-icon {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  margin-right: 10px;
+  transition: all 0.3s;
+}
+
+.footer-social-icon:hover {
+  background-color: #ffc107;
+  transform: translateY(-3px);
+}
+
+/* Responsive adjustments for toggles */
+@media (max-width: 991px) {
+  .theme-toggle,
+  .language-switcher {
+    margin: 10px 0;
+    display: block;
+    width: 100%;
+  }
 }

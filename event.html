@@ -1,186 +1,492 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>تفاصيل الفعالية - دليل فعاليات المدينة</title>
 
     <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
 
     <!-- Google Fonts - Arabic -->
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
 
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="assets/css/styles.css">
-</head>
-<body>
+    <link rel="stylesheet" href="assets/css/styles.css" />
+  </head>
+  <body>
     <!-- Header with Navbar -->
     <header>
-        <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-            <div class="container">
-                <a class="navbar-brand" href="index.html">
-                    <strong>🎉 دليل فعاليات المدينة</strong>
-                </a>
+      <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
+        <div class="container">
+          <a class="navbar-brand" href="index.html">
+            <strong>🎉 دليل فعاليات المدينة</strong>
+          </a>
 
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-label="القائمة">
-                    <span class="navbar-toggler-icon"></span>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-label="القائمة"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto align-items-center">
+              <li class="nav-item">
+                <a class="nav-link" href="index.html">الرئيسية</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="events.html">كل الفعاليات</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="about.html">عن الدليل</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="contact.html">اتصل بنا</a>
+              </li>
+              <li class="nav-item">
+                <button class="theme-toggle" id="themeToggle">
+                  🌙 وضع ليلي
                 </button>
-
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav ms-auto">
-                        <li class="nav-item"><a class="nav-link" href="index.html">الرئيسية</a></li>
-                        <li class="nav-item"><a class="nav-link" href="events.html">كل الفعاليات</a></li>
-                        <li class="nav-item"><a class="nav-link" href="about.html">عن الدليل</a></li>
-                        <li class="nav-item"><a class="nav-link" href="contact.html">اتصل بنا</a></li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
+              </li>
+              <li class="nav-item dropdown language-switcher">
+                <button
+                  class="dropdown-toggle"
+                  type="button"
+                  id="currentLang"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  🇸🇾 العربية
+                </button>
+                <ul class="dropdown-menu dropdown-menu-end">
+                  <li>
+                    <a class="dropdown-item lang-switch" href="#" data-lang="ar"
+                      >🇸🇾 العربية</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item lang-switch" href="#" data-lang="en"
+                      >🇬🇧 English</a
+                    >
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
     </header>
 
     <!-- Main Content -->
     <main>
-        <!-- Event Header Section -->
-        <section class="event-header py-5 bg-light">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-8">
-                        <span class="badge bg-danger mb-3">موسيقى</span>
-                        <h1>مهرجان الموسيقى الصيفي</h1>
-                        <p class="lead">استمتع بأجمل الأمسيات الموسيقية مع فنانين محليين ودوليين</p>
-                    </div>
-                </div>
+      <!-- Event Header Section -->
+      <section class="event-header py-5 bg-light">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-8">
+              <span class="badge bg-danger mb-3">موسيقى</span>
+              <h1>مهرجان الموسيقى الصيفي</h1>
+              <p class="lead">
+                استمتع بأجمل الأمسيات الموسيقية مع فنانين محليين ودوليين
+              </p>
             </div>
-        </section>
+          </div>
+        </div>
+      </section>
 
-        <!-- Event Details Section -->
-        <section class="event-details py-5">
-            <div class="container">
-                <div class="row">
-                    <!-- Main Content Column -->
-                    <div class="col-lg-8">
-                        <img src="assets/img/Main/music_event.jpeg" class="img-fluid rounded mb-4" alt="مهرجان الموسيقى">
+      <!-- Event Details Section -->
+      <section class="event-details py-5">
+        <div class="container">
+          <div class="row">
+            <!-- Main Content Column -->
+            <div class="col-lg-8">
+              <img
+                src="assets/img/Main/music_event.jpeg"
+                class="img-fluid rounded mb-4"
+                alt="مهرجان الموسيقى"
+              />
 
-                        <h3>عن الفعالية</h3>
-                        <p>يعتبر مهرجان الموسيقى الصيفي من أكبر الفعاليات الموسيقية في المدينة...</p>
+              <h3>عن الفعالية</h3>
+              <p>
+                يعتبر مهرجان الموسيقى الصيفي من أكبر الفعاليات الموسيقية في
+                المدينة...
+              </p>
 
-                        <h3 class="mt-4">معرض الصور</h3>
-                        <div class="row mb-4">
-                            <div class="col-md-4 mb-3">
-                                <img src="assets/img/Main/music_event.jpeg" class="img-fluid rounded" alt="صورة 1">
-                            </div>
-                            <div class="col-md-4 mb-3">
-                                <img src="assets/img/Main/music_event.jpeg" class="img-fluid rounded" alt="صورة 2">
-                            </div>
-                            <div class="col-md-4 mb-3">
-                                <img src="assets/img/Main/music_event.jpeg" class="img-fluid rounded" alt="صورة 3">
-                            </div>
-                        </div>
-
-                        <h3>برنامج الفعالية</h3>
-                        <ul>
-                            <li>5:00 مساءً - افتتاح الأبواب</li>
-                            <li>6:00 مساءً - عرض الفرقة الافتتاحية</li>
-                            <li>7:30 مساءً - استراحة</li>
-                            <li>8:00 مساءً - العرض الرئيسي</li>
-                            <li>10:00 مساءً - اختتام الفعالية</li>
-                        </ul>
-                    </div>
-
-                    <!-- Sidebar -->
-                    <div class="col-lg-4">
-                        <div class="card mb-4">
-                            <div class="card-body">
-                                <h5 class="card-title">معلومات الفعالية</h5>
-                                <p><strong>📅 التاريخ:</strong> الجمعة، 25 أكتوبر 2025</p>
-                                <p><strong>🕐 الوقت:</strong> 5:00 مساءً - 10:00 مساءً</p>
-                                <p><strong>📍 المكان:</strong> مسرح المدينة الكبير</p>
-                                <p><strong>💰 السعر:</strong> 50 ريال - 150 ريال</p>
-                                <p><strong>👥 عدد المقاعد:</strong> 500 مقعد</p>
-
-                                <button class="btn btn-primary w-100 mb-2" data-bs-toggle="modal" data-bs-target="#bookingModal">احجز الآن</button>
-                                <button class="btn btn-outline-primary w-100 mb-2" id="addToCalendar">أضف للتقويم</button>
-                                <button class="btn btn-outline-secondary w-100" id="shareEvent">شارك الفعالية</button>
-                            </div>
-                        </div>
-
-                        <div class="card mb-4">
-                            <div class="card-body">
-                                <h5 class="card-title">الموقع على الخريطة</h5>
-                                <img src="assets/img/Main/music_event.jpeg" class="img-fluid rounded" alt="خريطة">
-                            </div>
-                        </div>
-
-                        <div class="card">
-                            <div class="card-body">
-                                <h5 class="card-title">المنظم</h5>
-                                <p><strong>مؤسسة الفنون الموسيقية</strong></p>
-                                <p>📧 music@cityevents.com</p>
-                                <p>📞 123-456-7890</p>
-                            </div>
-                        </div>
-                    </div>
+              <h3 class="mt-4">معرض الصور</h3>
+              <div class="row mb-4">
+                <div class="col-md-4 mb-3">
+                  <img
+                    src="assets/img/Main/music_event.jpeg"
+                    class="img-fluid rounded"
+                    alt="صورة 1"
+                  />
                 </div>
-            </div>
-        </section>
-
-        <!-- Related Events -->
-        <section class="related-events py-5 bg-light">
-            <div class="container">
-                <h3 class="mb-4">فعاليات ذات صلة</h3>
-                <div class="row">
-                    <div class="col-md-4 mb-4">
-                        <div class="card h-100">
-                            <img src="assets/img/Main/music_event.jpeg" class="card-img-top" alt="حفل موسيقي">
-                            <div class="card-body">
-                                <span class="badge bg-danger mb-2">موسيقى</span>
-                                <h5 class="card-title">حفل موسيقي مباشر</h5>
-                                <p>📅 الثلاثاء، 23 أكتوبر 2025</p>
-                                <p>📍 وسط المدينة</p>
-                                <a href="event.html" class="btn btn-primary btn-sm">التفاصيل</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-md-4 mb-4">
-                        <div class="card h-100">
-                            <img src="assets/img/Main/music_event.jpeg" class="card-img-top" alt="أمسية شعرية">
-                            <div class="card-body">
-                                <span class="badge bg-primary mb-2">ثقافة</span>
-                                <h5 class="card-title">أمسية شعرية</h5>
-                                <p>📅 الأربعاء، 24 أكتوبر 2025</p>
-                                <p>📍 المركز الثقافي</p>
-                                <a href="event.html" class="btn btn-primary btn-sm">التفاصيل</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-md-4 mb-4">
-                        <div class="card h-100">
-                            <img src="assets/img/Main/music_event.jpeg" class="card-img-top" alt="ورشة موسيقية">
-                            <div class="card-body">
-                                <span class="badge bg-danger mb-2">موسيقى</span>
-                                <h5 class="card-title">ورشة تعليم الموسيقى</h5>
-                                <p>📅 الخميس، 26 أكتوبر 2025</p>
-                                <p>📍 معهد الموسيقى</p>
-                                <a href="event.html" class="btn btn-primary btn-sm">التفاصيل</a>
-                            </div>
-                        </div>
-                    </div>
+                <div class="col-md-4 mb-3">
+                  <img
+                    src="assets/img/Main/music_event.jpeg"
+                    class="img-fluid rounded"
+                    alt="صورة 2"
+                  />
                 </div>
+                <div class="col-md-4 mb-3">
+                  <img
+                    src="assets/img/Main/music_event.jpeg"
+                    class="img-fluid rounded"
+                    alt="صورة 3"
+                  />
+                </div>
+              </div>
+
+              <h3>برنامج الفعالية</h3>
+              <ul>
+                <li>5:00 مساءً - افتتاح الأبواب</li>
+                <li>6:00 مساءً - عرض الفرقة الافتتاحية</li>
+                <li>7:30 مساءً - استراحة</li>
+                <li>8:00 مساءً - العرض الرئيسي</li>
+                <li>10:00 مساءً - اختتام الفعالية</li>
+              </ul>
             </div>
-        </section>
+
+            <!-- Sidebar -->
+            <div class="col-lg-4">
+              <div class="card mb-4">
+                <div class="card-body">
+                  <h5 class="card-title">معلومات الفعالية</h5>
+                  <p><strong>📅 التاريخ:</strong> الجمعة، 25 أكتوبر 2025</p>
+                  <p><strong>🕐 الوقت:</strong> 5:00 مساءً - 10:00 مساءً</p>
+                  <p><strong>📍 المكان:</strong> مسرح المدينة الكبير</p>
+                  <p><strong>💰 السعر:</strong> 50 ريال - 150 ريال</p>
+                  <p><strong>👥 عدد المقاعد:</strong> 500 مقعد</p>
+
+                  <button
+                    class="btn btn-primary w-100 mb-2"
+                    data-bs-toggle="modal"
+                    data-bs-target="#bookingModal"
+                  >
+                    احجز الآن
+                  </button>
+                  <button
+                    class="btn btn-outline-primary w-100 mb-2"
+                    id="addToCalendar"
+                  >
+                    أضف للتقويم
+                  </button>
+                  <button
+                    class="btn btn-outline-secondary w-100"
+                    id="shareEvent"
+                  >
+                    شارك الفعالية
+                  </button>
+                </div>
+              </div>
+
+              <div class="card mb-4">
+                <div class="card-body">
+                  <h5 class="card-title">الموقع على الخريطة</h5>
+                  <img
+                    src="assets/img/Main/music_event.jpeg"
+                    class="img-fluid rounded"
+                    alt="خريطة"
+                  />
+                </div>
+              </div>
+
+              <div class="card">
+                <div class="card-body">
+                  <h5 class="card-title">المنظم</h5>
+                  <p><strong>مؤسسة الفنون الموسيقية</strong></p>
+                  <p>📧 music@cityevents.com</p>
+                  <p>📞 123-456-7890</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Related Events -->
+      <section class="related-events py-5 bg-light">
+        <div class="container">
+          <h3 class="mb-4">فعاليات ذات صلة</h3>
+          <div class="row">
+            <div class="col-md-4 mb-4">
+              <div class="card h-100">
+                <img
+                  src="assets/img/Main/music_event.jpeg"
+                  class="card-img-top"
+                  alt="حفل موسيقي"
+                />
+                <div class="card-body">
+                  <span class="badge bg-danger mb-2">موسيقى</span>
+                  <h5 class="card-title">حفل موسيقي مباشر</h5>
+                  <p>📅 الثلاثاء، 23 أكتوبر 2025</p>
+                  <p>📍 وسط المدينة</p>
+                  <a href="event.html" class="btn btn-primary btn-sm"
+                    >التفاصيل</a
+                  >
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-4 mb-4">
+              <div class="card h-100">
+                <img
+                  src="assets/img/Main/music_event.jpeg"
+                  class="card-img-top"
+                  alt="أمسية شعرية"
+                />
+                <div class="card-body">
+                  <span class="badge bg-primary mb-2">ثقافة</span>
+                  <h5 class="card-title">أمسية شعرية</h5>
+                  <p>📅 الأربعاء، 24 أكتوبر 2025</p>
+                  <p>📍 المركز الثقافي</p>
+                  <a href="event.html" class="btn btn-primary btn-sm"
+                    >التفاصيل</a
+                  >
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-4 mb-4">
+              <div class="card h-100">
+                <img
+                  src="assets/img/Main/music_event.jpeg"
+                  class="card-img-top"
+                  alt="ورشة موسيقية"
+                />
+                <div class="card-body">
+                  <span class="badge bg-danger mb-2">موسيقى</span>
+                  <h5 class="card-title">ورشة تعليم الموسيقى</h5>
+                  <p>📅 الخميس، 26 أكتوبر 2025</p>
+                  <p>📍 معهد الموسيقى</p>
+                  <a href="event.html" class="btn btn-primary btn-sm"
+                    >التفاصيل</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
 
-    <!-- Footer -->
-    <footer class="bg-dark text-white py-4">
-        <div class="container text-center">
-            <p>&copy; 2025 دليل فعاليات المدينة. جميع الحقوق محفوظة.</p>
+    <!-- ProTeam Section -->
+    <section class="proteam-section">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-8">
+            <div class="proteam-card">
+              <img
+                src="assets/img/proteam-logo.svg"
+                alt="ProTeam Syria Logo"
+                class="proteam-logo"
+              />
+              <h2 class="proteam-title">مطور بواسطة ProTeam Syria</h2>
+              <p class="proteam-description">
+                نحن فريق محترف متخصص في تطوير المواقع والتطبيقات الإلكترونية
+                <br />
+                نقدم حلولاً تقنية مبتكرة لعملائنا في سوريا والوطن العربي
+              </p>
+              <a
+                href="https://proteam-syria.com"
+                target="_blank"
+                class="proteam-btn"
+              >
+                🌐 زيارة موقعنا الرسمي
+              </a>
+            </div>
+          </div>
         </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-5">
+      <div class="container">
+        <div class="row">
+          <!-- Contact Info -->
+          <div class="col-lg-3 col-md-6 mb-4 footer-col">
+            <h5>معلومات التواصل</h5>
+            <p><i>📧</i> البريد: info@cityevents.com</p>
+            <p><i>📞</i> الهاتف: 123-456-7890</p>
+            <p><i>📍</i> دمشق، سوريا</p>
+          </div>
+
+          <!-- Quick Links -->
+          <div class="col-lg-3 col-md-6 mb-4 footer-col">
+            <h5>روابط سريعة</h5>
+            <ul class="list-unstyled">
+              <li class="mb-2">
+                <a href="index.html" class="text-white">الرئيسية</a>
+              </li>
+              <li class="mb-2">
+                <a href="events.html" class="text-white">كل الفعاليات</a>
+              </li>
+              <li class="mb-2">
+                <a href="about.html" class="text-white">عن الدليل</a>
+              </li>
+              <li class="mb-2">
+                <a href="contact.html" class="text-white">اتصل بنا</a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Social Media -->
+          <div class="col-lg-3 col-md-6 mb-4 footer-col">
+            <h5>تابعنا</h5>
+            <div class="social-links">
+              <a
+                href="https://www.facebook.com/share/16ATHCTibk/"
+                target="_blank"
+                class="footer-social-icon text-white"
+              >
+                📘
+              </a>
+              <a
+                href="https://www.instagram.com/pro.team.syria?igsh=MWN2Zjd6YXI3a3Zoag=="
+                target="_blank"
+                class="footer-social-icon text-white"
+              >
+                📷
+              </a>
+              <a href="#" class="footer-social-icon text-white"> 🐦 </a>
+              <a href="#" class="footer-social-icon text-white"> 💬 </a>
+            </div>
+          </div>
+
+          <!-- Team Info -->
+          <div class="col-lg-3 col-md-6 mb-4 footer-col">
+            <h5>أعضاء الفريق</h5>
+            <p class="mb-1"><strong>محمد براء دندشلي</strong></p>
+            <p class="small text-muted mb-2">mhd_baraa_291066</p>
+            <p class="mb-1"><strong>ميس الريم صبيح</strong></p>
+            <p class="small text-muted mb-2">mais_alreem_289353</p>
+            <p class="mb-1"><strong>نور الهدى السعد</strong></p>
+            <p class="small text-muted">nour_al_houda_314844</p>
+          </div>
+        </div>
+
+        <hr class="bg-white my-4" />
+
+        <div class="row">
+          <div class="col-12 text-center">
+            <p class="mb-0">
+              &copy; 2025 دليل فعاليات المدينة. جميع الحقوق محفوظة.
+            </p>
+            <p class="small mt-2">
+              تم التطوير بواسطة
+              <a
+                href="https://proteam-syria.com"
+                target="_blank"
+                class="text-warning"
+                >ProTeam Syria</a
+              >
+            </p>
+          </div>
+        </div>
+      </div>
     </footer>
+
+    <!-- Booking Modal -->
+    <div
+      class="modal fade"
+      id="bookingModal"
+      tabindex="-1"
+      aria-labelledby="bookingModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="bookingModalLabel">احجز تذكرتك</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="إغلاق"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <form id="bookingForm">
+              <div class="mb-3">
+                <label for="bookingName" class="form-label">الاسم الكامل</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="bookingName"
+                  required
+                />
+              </div>
+              <div class="mb-3">
+                <label for="bookingEmail" class="form-label"
+                  >البريد الإلكتروني</label
+                >
+                <input
+                  type="email"
+                  class="form-control"
+                  id="bookingEmail"
+                  required
+                />
+              </div>
+              <div class="mb-3">
+                <label for="bookingPhone" class="form-label">رقم الهاتف</label>
+                <input
+                  type="tel"
+                  class="form-control"
+                  id="bookingPhone"
+                  required
+                />
+              </div>
+              <div class="mb-3">
+                <label for="ticketType" class="form-label">نوع التذكرة</label>
+                <select class="form-select" id="ticketType" required>
+                  <option value="">اختر نوع التذكرة</option>
+                  <option value="standard">عادية - 50 ريال</option>
+                  <option value="vip">VIP - 100 ريال</option>
+                  <option value="premium">بريميوم - 150 ريال</option>
+                </select>
+              </div>
+              <div class="mb-3">
+                <label for="ticketCount" class="form-label">عدد التذاكر</label>
+                <input
+                  type="number"
+                  class="form-control"
+                  id="ticketCount"
+                  min="1"
+                  max="10"
+                  value="1"
+                  required
+                />
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              إلغاء
+            </button>
+            <button type="button" class="btn btn-primary" id="confirmBooking">
+              تأكيد الحجز
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="assets/js/main.js"></script>
-</body>
+  </body>
 </html>

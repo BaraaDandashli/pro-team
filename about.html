@@ -1,311 +1,460 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>عن الدليل - دليل فعاليات المدينة</title>
 
     <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
 
     <!-- Google Fonts - Arabic -->
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
 
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="assets/css/styles.css">
-</head>
-<body>
+    <link rel="stylesheet" href="assets/css/styles.css" />
+  </head>
+  <body>
     <!-- Header with Navbar -->
     <header>
-        <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-            <div class="container">
-                <a class="navbar-brand" href="index.html">
-                    <strong>دليل فعاليات المدينة</strong>
-                </a>
+      <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
+        <div class="container">
+          <a class="navbar-brand" href="index.html">
+            <strong>دليل فعاليات المدينة</strong>
+          </a>
 
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-label="القائمة">
-                    <span class="navbar-toggler-icon"></span>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-label="القائمة"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto align-items-center">
+              <li class="nav-item">
+                <a class="nav-link" href="index.html">الرئيسية</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="events.html">كل الفعاليات</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="about.html">عن الدليل</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="contact.html">اتصل بنا</a>
+              </li>
+              <li class="nav-item">
+                <button class="theme-toggle" id="themeToggle">
+                  🌙 وضع ليلي
                 </button>
-
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav ms-auto">
-                        <li class="nav-item">
-                            <a class="nav-link" href="index.html">الرئيسية</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="events.html">كل الفعاليات</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link active" href="about.html">عن الدليل</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="contact.html">اتصل بنا</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
+              </li>
+              <li class="nav-item dropdown language-switcher">
+                <button
+                  class="dropdown-toggle"
+                  type="button"
+                  id="currentLang"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  🇸🇾 العربية
+                </button>
+                <ul class="dropdown-menu dropdown-menu-end">
+                  <li>
+                    <a class="dropdown-item lang-switch" href="#" data-lang="ar"
+                      >🇸🇾 العربية</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item lang-switch" href="#" data-lang="en"
+                      >🇬🇧 English</a
+                    >
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
     </header>
 
     <!-- Main Content -->
     <main>
-        <!-- Page Header -->
-        <section class="page-header bg-primary text-white py-5">
-            <div class="container">
-                <h1 class="text-center">عن دليل فعاليات المدينة</h1>
-                <p class="text-center lead">منصتك المثالية لاكتشاف أفضل الفعاليات في مدينتك</p>
-            </div>
-        </section>
+      <!-- Page Header -->
+      <section class="page-header bg-primary text-white py-5">
+        <div class="container">
+          <h1 class="text-center">عن دليل فعاليات المدينة</h1>
+          <p class="text-center lead">
+            منصتك المثالية لاكتشاف أفضل الفعاليات في مدينتك
+          </p>
+        </div>
+      </section>
 
-        <!-- About Section -->
-        <section class="about-section py-5">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-6 mb-4">
-                        <h2>من نحن؟</h2>
-                        <p>
-                            دليل فعاليات المدينة هو منصة إلكترونية شاملة تهدف إلى ربط المجتمع بأفضل
-                            الفعاليات والأنشطة المحلية. نحن نؤمن بأن الحياة الثقافية والاجتماعية النابضة
-                            هي أساس مجتمع حيوي ومزدهر.
-                        </p>
-                        <p>
-                            منذ تأسيسنا، عملنا على توفير منصة سهلة الاستخدام تجمع جميع الفعاليات في
-                            مكان واحد، مما يسهل على المواطنين والزوار اكتشاف الأنشطة التي تناسب اهتماماتهم.
-                        </p>
-                    </div>
-                    <!-- <div class="col-lg-6 mb-4">
+      <!-- About Section -->
+      <section class="about-section py-5">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-6 mb-4">
+              <h2>من نحن؟</h2>
+              <p>
+                دليل فعاليات المدينة هو منصة إلكترونية شاملة تهدف إلى ربط
+                المجتمع بأفضل الفعاليات والأنشطة المحلية. نحن نؤمن بأن الحياة
+                الثقافية والاجتماعية النابضة هي أساس مجتمع حيوي ومزدهر.
+              </p>
+              <p>
+                منذ تأسيسنا، عملنا على توفير منصة سهلة الاستخدام تجمع جميع
+                الفعاليات في مكان واحد، مما يسهل على المواطنين والزوار اكتشاف
+                الأنشطة التي تناسب اهتماماتهم.
+              </p>
+            </div>
+            <!-- <div class="col-lg-6 mb-4">
                         <img src="assets/img/event1.jpg" width="50" 
                              class="assets/img/event1" alt="عن الدليل">
                     </div> -->
+          </div>
+        </div>
+      </section>
+
+      <!-- Vision & Mission Section -->
+      <section class="vision-mission py-5 bg-light">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-4 mb-4">
+              <div class="card h-100 text-center">
+                <div class="card-body">
+                  <div class="mb-3">
+                    <span style="font-size: 3rem">🎯</span>
+                  </div>
+                  <h4>رؤيتنا</h4>
+                  <p>
+                    أن نكون المنصة الرائدة في المنطقة لاكتشاف ومشاركة الفعاليات
+                    المحلية، ونساهم في بناء مجتمع متفاعل ومتصل ثقافياً
+                    واجتماعياً.
+                  </p>
                 </div>
+              </div>
             </div>
-        </section>
 
-        <!-- Vision & Mission Section -->
-        <section class="vision-mission py-5 bg-light">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-4 mb-4">
-                        <div class="card h-100 text-center">
-                            <div class="card-body">
-                                <div class="mb-3">
-                                    <span style="font-size: 3rem;">🎯</span>
-                                </div>
-                                <h4>رؤيتنا</h4>
-                                <p>
-                                    أن نكون المنصة الرائدة في المنطقة لاكتشاف ومشاركة الفعاليات المحلية،
-                                    ونساهم في بناء مجتمع متفاعل ومتصل ثقافياً واجتماعياً.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-md-4 mb-4">
-                        <div class="card h-100 text-center">
-                            <div class="card-body">
-                                <div class="mb-3">
-                                    <span style="font-size: 3rem;">💡</span>
-                                </div>
-                                <h4>رسالتنا</h4>
-                                <p>
-                                    توفير منصة شاملة وسهلة الاستخدام تربط الناس بالفعاليات التي تثري حياتهم،
-                                    ودعم المنظمين والفنانين المحليين في الوصول إلى جمهور أوسع.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-md-4 mb-4">
-                        <div class="card h-100 text-center">
-                            <div class="card-body">
-                                <div class="mb-3">
-                                    <span style="font-size: 3rem;">⭐</span>
-                                </div>
-                                <h4>قيمنا</h4>
-                                <p>
-                                    الشفافية، المصداقية، التنوع الثقافي، دعم المجتمع المحلي، والابتكار
-                                    في تقديم خدمات تلبي احتياجات جميع فئات المجتمع.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
+            <div class="col-md-4 mb-4">
+              <div class="card h-100 text-center">
+                <div class="card-body">
+                  <div class="mb-3">
+                    <span style="font-size: 3rem">💡</span>
+                  </div>
+                  <h4>رسالتنا</h4>
+                  <p>
+                    توفير منصة شاملة وسهلة الاستخدام تربط الناس بالفعاليات التي
+                    تثري حياتهم، ودعم المنظمين والفنانين المحليين في الوصول إلى
+                    جمهور أوسع.
+                  </p>
                 </div>
+              </div>
             </div>
-        </section>
 
-        <!-- Team Section -->
-        <section class="team-section py-5">
-            <div class="container">
-                <h2 class="text-center mb-5">فريق العمل</h2>
-                <div class="row justify-content-center">
-                    <!-- Team Member 1 -->
-                    <div class="col-md-3 col-sm-6 mb-4">
-                        <div class="card text-center h-100 d-flex flex-column">
-                            <img src="assets/img/Team/baraa.jpg"
-                                 class="card-img-top" alt="براء">
-                            <div class="card-body">
-                                <h5 class="card-title">محمد براء دندشلي</h5>
-                                <p class="text-muted">المدير التنفيذي</p>
-                                <p class="small">مسؤول عن الإدارة العامة والتخطيط الاستراتيجي</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Team Member 2 -->
-                    <div class="col-md-3 col-sm-6 mb-4">
-                        <div class="card text-center h-100 d-flex flex-column">
-                            <img src="assets/img/Team/mais.jpg"
-                                 class="card-img-top" alt="ميس">
-                            <div class="card-body">
-                                <h5 class="card-title">ميس الريم صبيح</h5>
-                                <p class="text-muted">مديرة المحتوى</p>
-                                <p class="small">مسؤولة عن إدارة المحتوى والتواصل مع المنظمين</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Team Member 3 -->
-                    <div class="col-md-3 col-sm-6 mb-4">
-                        <div class="card text-center h-100 d-flex flex-column">
-                            <img src="assets/img/Team/nour.jpg"
-                                 class="card-img-top" alt="نور">
-                            <div class="card-body">
-                                <h5 class="card-title">نور الهدى السعد</h5>
-                                <p class="text-muted">مطور الويب</p>
-                                <p class="small">مسؤول عن تطوير وصيانة المنصة الإلكترونية</p>
-                            </div>
-                        </div>
-                    </div>
+            <div class="col-md-4 mb-4">
+              <div class="card h-100 text-center">
+                <div class="card-body">
+                  <div class="mb-3">
+                    <span style="font-size: 3rem">⭐</span>
+                  </div>
+                  <h4>قيمنا</h4>
+                  <p>
+                    الشفافية، المصداقية، التنوع الثقافي، دعم المجتمع المحلي،
+                    والابتكار في تقديم خدمات تلبي احتياجات جميع فئات المجتمع.
+                  </p>
                 </div>
+              </div>
             </div>
-        </section>
+          </div>
+        </div>
+      </section>
 
-        <!-- Partners Section -->
-        <section class="partners-section py-5 bg-light">
-            <div class="container">
-                <h2 class="text-center mb-5">شركاؤنا</h2>
-                <div class="row justify-content-center">
-                    <div class="col-md-3 col-6 mb-4">
-                        <div class="partner-logo">
-                            <img src="assets\img\Partners\google.jpg"
-                                 class="img-fluid" alt="شريك 1">
-                        </div>
-                    </div>
-                    <div class="col-md-3 col-6 mb-4">
-                        <div class="partner-logo">
-                            <img src="assets\img\Partners\amazon.png"
-                                 class="img-fluid" alt="شريك 2">
-                        </div>
-                    </div>
-                    <div class="col-md-3 col-6 mb-4">
-                        <div class="partner-logo">
-                            <img src="assets\img\Partners\meta.jpg"
-                                 class="img-fluid" alt="شريك 3">
-                        </div>
-                    </div>                    
+      <!-- Team Section -->
+      <section class="team-section py-5">
+        <div class="container">
+          <h2 class="text-center mb-5">فريق العمل</h2>
+          <div class="row justify-content-center">
+            <!-- Team Member 1 -->
+            <div class="col-md-3 col-sm-6 mb-4">
+              <div class="card text-center h-100 d-flex flex-column">
+                <img
+                  src="assets/img/Team/baraa.jpg"
+                  class="card-img-top"
+                  alt="براء"
+                />
+                <div class="card-body">
+                  <h5 class="card-title">محمد براء دندشلي</h5>
+                  <p class="text-muted">المدير التنفيذي</p>
+                  <p class="small">
+                    مسؤول عن الإدارة العامة والتخطيط الاستراتيجي
+                  </p>
                 </div>
+              </div>
             </div>
-        </section>
 
-        <!-- Policies Section -->
-        <section class="policies-section py-5">
-            <div class="container">
-                <h2 class="text-center mb-5">سياساتنا</h2>
-                <div class="row">
-                    <div class="col-md-6 mb-4">
-                        <div class="card">
-                            <div class="card-body">
-                                <h4>📝 سياسة تقديم الفعاليات</h4>
-                                <ul>
-                                    <li>يجب أن تكون الفعالية محلية وموجهة للمجتمع</li>
-                                    <li>تقديم معلومات دقيقة وكاملة عن الفعالية</li>
-                                    <li>الالتزام بالمواعيد المحددة للفعالية</li>
-                                    <li>توفير صور واضحة وذات جودة عالية</li>
-                                    <li>احترام حقوق الملكية الفكرية</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-md-6 mb-4">
-                        <div class="card">
-                            <div class="card-body">
-                                <h4>✅ معايير النشر</h4>
-                                <ul>
-                                    <li>الفعالية يجب أن تكون قانونية ومناسبة لجميع الأعمار</li>
-                                    <li>عدم نشر محتوى مسيء أو غير لائق</li>
-                                    <li>الالتزام بمعايير السلامة العامة</li>
-                                    <li>توفير معلومات تواصل صحيحة</li>
-                                    <li>المراجعة والموافقة تتم خلال 24-48 ساعة</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
+            <!-- Team Member 2 -->
+            <div class="col-md-3 col-sm-6 mb-4">
+              <div class="card text-center h-100 d-flex flex-column">
+                <img
+                  src="assets/img/Team/mais.jpg"
+                  class="card-img-top"
+                  alt="ميس"
+                />
+                <div class="card-body">
+                  <h5 class="card-title">ميس الريم صبيح</h5>
+                  <p class="text-muted">مديرة المحتوى</p>
+                  <p class="small">
+                    مسؤولة عن إدارة المحتوى والتواصل مع المنظمين
+                  </p>
                 </div>
+              </div>
             </div>
-        </section>
 
-        <!-- Statistics Section -->
-        <section class="stats-section py-5 bg-primary text-white">
-            <div class="container">
-                <div class="row text-center">
-                    <div class="col-md-3 col-6 mb-4">
-                        <h2 class="display-4">500+</h2>
-                        <p>فعالية منشورة</p>
-                    </div>
-                    <div class="col-md-3 col-6 mb-4">
-                        <h2 class="display-4">10K+</h2>
-                        <p>زائر شهرياً</p>
-                    </div>
-                    <div class="col-md-3 col-6 mb-4">
-                        <h2 class="display-4">150+</h2>
-                        <p>منظم فعاليات</p>
-                    </div>
-                    <div class="col-md-3 col-6 mb-4">
-                        <h2 class="display-4">50+</h2>
-                        <p>شريك استراتيجي</p>
-                    </div>
+            <!-- Team Member 3 -->
+            <div class="col-md-3 col-sm-6 mb-4">
+              <div class="card text-center h-100 d-flex flex-column">
+                <img
+                  src="assets/img/Team/nour.jpg"
+                  class="card-img-top"
+                  alt="نور"
+                />
+                <div class="card-body">
+                  <h5 class="card-title">نور الهدى السعد</h5>
+                  <p class="text-muted">مطور الويب</p>
+                  <p class="small">مسؤول عن تطوير وصيانة المنصة الإلكترونية</p>
                 </div>
+              </div>
             </div>
-        </section>
+          </div>
+        </div>
+      </section>
+
+      <!-- Partners Section -->
+      <section class="partners-section py-5 bg-light">
+        <div class="container">
+          <h2 class="text-center mb-5">شركاؤنا</h2>
+          <div class="row justify-content-center">
+            <div class="col-md-3 col-6 mb-4">
+              <div class="partner-logo">
+                <img
+                  src="assets\img\Partners\google.jpg"
+                  class="img-fluid"
+                  alt="شريك 1"
+                />
+              </div>
+            </div>
+            <div class="col-md-3 col-6 mb-4">
+              <div class="partner-logo">
+                <img
+                  src="assets\img\Partners\amazon.png"
+                  class="img-fluid"
+                  alt="شريك 2"
+                />
+              </div>
+            </div>
+            <div class="col-md-3 col-6 mb-4">
+              <div class="partner-logo">
+                <img
+                  src="assets\img\Partners\meta.jpg"
+                  class="img-fluid"
+                  alt="شريك 3"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Policies Section -->
+      <section class="policies-section py-5">
+        <div class="container">
+          <h2 class="text-center mb-5">سياساتنا</h2>
+          <div class="row">
+            <div class="col-md-6 mb-4">
+              <div class="card">
+                <div class="card-body">
+                  <h4>📝 سياسة تقديم الفعاليات</h4>
+                  <ul>
+                    <li>يجب أن تكون الفعالية محلية وموجهة للمجتمع</li>
+                    <li>تقديم معلومات دقيقة وكاملة عن الفعالية</li>
+                    <li>الالتزام بالمواعيد المحددة للفعالية</li>
+                    <li>توفير صور واضحة وذات جودة عالية</li>
+                    <li>احترام حقوق الملكية الفكرية</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-6 mb-4">
+              <div class="card">
+                <div class="card-body">
+                  <h4>✅ معايير النشر</h4>
+                  <ul>
+                    <li>الفعالية يجب أن تكون قانونية ومناسبة لجميع الأعمار</li>
+                    <li>عدم نشر محتوى مسيء أو غير لائق</li>
+                    <li>الالتزام بمعايير السلامة العامة</li>
+                    <li>توفير معلومات تواصل صحيحة</li>
+                    <li>المراجعة والموافقة تتم خلال 24-48 ساعة</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Statistics Section -->
+      <section class="stats-section py-5 bg-primary text-white">
+        <div class="container">
+          <div class="row text-center">
+            <div class="col-md-3 col-6 mb-4">
+              <h2 class="display-4">500+</h2>
+              <p>فعالية منشورة</p>
+            </div>
+            <div class="col-md-3 col-6 mb-4">
+              <h2 class="display-4">10K+</h2>
+              <p>زائر شهرياً</p>
+            </div>
+            <div class="col-md-3 col-6 mb-4">
+              <h2 class="display-4">150+</h2>
+              <p>منظم فعاليات</p>
+            </div>
+            <div class="col-md-3 col-6 mb-4">
+              <h2 class="display-4">50+</h2>
+              <p>شريك استراتيجي</p>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
 
-    <!-- Footer -->
-    <footer class="bg-dark text-white py-4">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-4 mb-3">
-                    <h5>معلومات التواصل</h5>
-                    <p>📧 البريد: info@cityevents.com</p>
-                    <p>📞 الهاتف: 123-456-7890</p>
-                </div>
-
-                <div class="col-md-4 mb-3">
-                    <h5>روابط سريعة</h5>
-                    <ul class="list-unstyled">
-                        <li><a href="index.html" class="text-white">الرئيسية</a></li>
-                        <li><a href="events.html" class="text-white">كل الفعاليات</a></li>
-                        <li><a href="about.html" class="text-white">عن الدليل</a></li>
-                        <li><a href="contact.html" class="text-white">اتصل بنا</a></li>
-                    </ul>
-                </div>
-
-                <div class="col-md-4 mb-3">
-                    <h5>تابعنا</h5>
-                    <div class="social-links">
-                        <a href="#" class="text-white me-3">فيسبوك</a>
-                        <a href="#" class="text-white me-3">تويتر</a>
-                        <a href="#" class="text-white">انستجرام</a>
-                    </div>
-                </div>
+    <!-- ProTeam Section -->
+    <section class="proteam-section">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-8">
+            <div class="proteam-card">
+              <img
+                src="assets/img/proteam-d-logo.svg"
+                alt="ProTeam Syria Logo"
+                class="proteam-logo"
+              />
+              <h2 class="proteam-title">مطور بواسطة ProTeam Syria</h2>
+              <p class="proteam-description">
+                نحن فريق من الطلاب, نعمل على نشر الثقافة التقنية بين الطلاب في سوريا
+                <br />
+                 من خلال ورش العمل التفاعلية والمشاريع الجماعية وتجارب التعلم العملية
+                <br />
+                <br />
+                و نقدم حلولاً تقنية مبتكرة لعملائنا في سوريا والوطن العربي
+              </p>
+              <a
+                href="https://proteam-syria.com"
+                target="_blank"
+                class="proteam-btn"
+              >
+                🌐 زيارة موقعنا الرسمي
+              </a>
             </div>
-
-            <hr class="bg-white">
-
-            <div class="text-center">
-                <p>&copy; 2025 دليل فعاليات المدينة. جميع الحقوق محفوظة.</p>
-            </div>
+          </div>
         </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-5">
+      <div class="container">
+        <div class="row">
+          <!-- Contact Info -->
+          <div class="col-lg-3 col-md-6 mb-4 footer-col">
+            <h5>معلومات التواصل</h5>
+            <p><i>📧</i> البريد: info@cityevents.com</p>
+            <p><i>📞</i> الهاتف: 123-456-7890</p>
+            <p><i>📍</i> دمشق، سوريا</p>
+          </div>
+
+          <!-- Quick Links -->
+          <div class="col-lg-3 col-md-6 mb-4 footer-col">
+            <h5>روابط سريعة</h5>
+            <ul class="list-unstyled">
+              <li class="mb-2">
+                <a href="index.html" class="text-white">الرئيسية</a>
+              </li>
+              <li class="mb-2">
+                <a href="events.html" class="text-white">كل الفعاليات</a>
+              </li>
+              <li class="mb-2">
+                <a href="about.html" class="text-white">عن الدليل</a>
+              </li>
+              <li class="mb-2">
+                <a href="contact.html" class="text-white">اتصل بنا</a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Social Media -->
+          <div class="col-lg-3 col-md-6 mb-4 footer-col">
+            <h5>تابعنا</h5>
+            <div class="social-links">
+              <a
+                href="https://www.facebook.com/share/16ATHCTibk/"
+                target="_blank"
+                class="footer-social-icon text-white"
+              >
+                📘
+              </a>
+              <a
+                href="https://www.instagram.com/pro.team.syria?igsh=MWN2Zjd6YXI3a3Zoag=="
+                target="_blank"
+                class="footer-social-icon text-white"
+              >
+                📷
+              </a>
+              <a href="#" class="footer-social-icon text-white"> 🐦 </a>
+              <a href="#" class="footer-social-icon text-white"> 💬 </a>
+            </div>
+          </div>
+
+          <!-- Team Info -->
+          <div class="col-lg-3 col-md-6 mb-4 footer-col">
+            <h5>أعضاء الفريق</h5>
+            <p class="mb-1"><strong>محمد براء دندشلي</strong></p>
+            <p class="small text-muted mb-2">mhd_baraa_291066</p>
+            <p class="mb-1"><strong>ميس الريم صبيح</strong></p>
+            <p class="small text-muted mb-2">mais_alreem_289353</p>
+            <p class="mb-1"><strong>نور الهدى السعد</strong></p>
+            <p class="small text-muted">nour_al_houda_314844</p>
+          </div>
+        </div>
+
+        <hr class="bg-white my-4" />
+
+        <div class="row">
+          <div class="col-12 text-center">
+            <p class="mb-0">
+              &copy; 2025 دليل فعاليات المدينة. جميع الحقوق محفوظة.
+            </p>
+            <p class="small mt-2">
+              تم التطوير بواسطة
+              <a
+                href="https://proteam-syria.com"
+                target="_blank"
+                class="text-warning"
+                >ProTeam Syria</a
+              >
+            </p>
+          </div>
+        </div>
+      </div>
     </footer>
 
     <!-- Bootstrap JS -->
@@ -313,5 +462,5 @@
 
     <!-- Custom JavaScript -->
     <script src="assets/js/main.js"></script>
-</body>
+  </body>
 </html>

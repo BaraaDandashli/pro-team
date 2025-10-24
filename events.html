@@ -1,166 +1,352 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>كل الفعاليات - دليل فعاليات المدينة</title>
 
     <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
 
     <!-- Google Fonts - Arabic -->
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
 
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="assets/css/styles.css">
-</head>
-<body>
+    <link rel="stylesheet" href="assets/css/styles.css" />
+  </head>
+  <body>
     <!-- Header -->
     <header>
-        <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-            <div class="container">
-                <a class="navbar-brand" href="index.html"><strong>🎉 دليل فعاليات المدينة</strong></a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                    <span class="navbar-toggler-icon"></span>
+      <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
+        <div class="container">
+          <a class="navbar-brand" href="index.html"
+            ><strong>🎉 دليل فعاليات المدينة</strong></a
+          >
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto align-items-center">
+              <li class="nav-item">
+                <a class="nav-link" href="index.html">الرئيسية</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="events.html">كل الفعاليات</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="about.html">عن الدليل</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="contact.html">اتصل بنا</a>
+              </li>
+              <li class="nav-item">
+                <button class="theme-toggle" id="themeToggle">
+                  🌙 وضع ليلي
                 </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav ms-auto">
-                        <li class="nav-item"><a class="nav-link" href="index.html">الرئيسية</a></li>
-                        <li class="nav-item"><a class="nav-link active" href="events.html">كل الفعاليات</a></li>
-                        <li class="nav-item"><a class="nav-link" href="about.html">عن الدليل</a></li>
-                        <li class="nav-item"><a class="nav-link" href="contact.html">اتصل بنا</a></li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
+              </li>
+              <li class="nav-item dropdown language-switcher">
+                <button
+                  class="dropdown-toggle"
+                  type="button"
+                  id="currentLang"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  🇸🇾 العربية
+                </button>
+                <ul class="dropdown-menu dropdown-menu-end">
+                  <li>
+                    <a class="dropdown-item lang-switch" href="#" data-lang="ar"
+                      >🇸🇾 العربية</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item lang-switch" href="#" data-lang="en"
+                      >🇬🇧 English</a
+                    >
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
     </header>
 
     <!-- Main -->
     <main>
-        <section class="page-header bg-primary text-white py-5">
-            <div class="container">
-                <h1 class="text-center">جميع الفعاليات</h1>
-                <p class="text-center">اكتشف جميع الفعاليات القادمة في مدينتك</p>
+      <section class="page-header bg-primary text-white py-5">
+        <div class="container">
+          <h1 class="text-center">جميع الفعاليات</h1>
+          <p class="text-center">اكتشف جميع الفعاليات القادمة في مدينتك</p>
+        </div>
+      </section>
+
+      <!-- Filter Section -->
+      <section class="filter-section py-4 bg-light">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-4 mb-3">
+              <input
+                type="text"
+                id="searchInput"
+                class="form-control"
+                placeholder="ابحث عن فعالية..."
+              />
             </div>
-        </section>
-
-        <!-- Filter Section -->
-        <section class="filter-section py-4 bg-light">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-4 mb-3">
-                        <input type="text" id="searchInput" class="form-control" placeholder="ابحث عن فعالية...">
-                    </div>
-                    <div class="col-md-3 mb-3">
-                        <select id="categoryFilter" class="form-select">
-                            <option value="all">جميع التصنيفات</option>
-                            <option value="culture">ثقافة</option>
-                            <option value="sports">رياضة</option>
-                            <option value="music">موسيقى</option>
-                            <option value="family">عائلي</option>
-                        </select>
-                    </div>
-                    <div class="col-md-3 mb-3">
-                        <select id="dateFilter" class="form-select">
-                            <option value="all">جميع التواريخ</option>
-                            <option value="today">اليوم</option>
-                            <option value="week">هذا الأسبوع</option>
-                            <option value="month">هذا الشهر</option>
-                        </select>
-                    </div>
-                    <div class="col-md-2 mb-3">
-                        <select id="locationFilter" class="form-select">
-                            <option value="all">جميع المواقع</option>
-                            <option value="downtown">وسط المدينة</option>
-                            <option value="north">الشمال</option>
-                            <option value="south">الجنوب</option>
-                        </select>
-                    </div>
-                </div>
+            <div class="col-md-3 mb-3">
+              <select id="categoryFilter" class="form-select">
+                <option value="all">جميع التصنيفات</option>
+                <option value="culture">ثقافة</option>
+                <option value="sports">رياضة</option>
+                <option value="music">موسيقى</option>
+                <option value="family">عائلي</option>
+              </select>
             </div>
-        </section>
-
-        <!-- Events List -->
-        <section class="events-list py-5">
-            <div class="container">
-                <div class="row" id="eventsContainer">
-                    <!-- Event Card (كلها بنفس الصورة) -->
-                    <div class="col-md-4 mb-4 event-card" data-category="music">
-                        <div class="card h-100">
-                            <img src="assets/img/Main/music_event.jpeg" class="card-img-top" alt="فعالية">
-                            <div class="card-body">
-                                <span class="badge bg-danger mb-2">موسيقى</span>
-                                <h5 class="card-title">مهرجان الموسيقى الصيفي</h5>
-                                <p class="card-text">📅 الجمعة، 25 أكتوبر 2025</p>
-                                <p class="card-text">📍 وسط المدينة</p>
-                                <p class="card-text">استمتع بأجمل الأمسيات الموسيقية مع فنانين محليين ودوليين</p>
-                                <a href="event.html" class="btn btn-primary">التفاصيل</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- مكرر لنفس الصورة لكل كارد -->
-                    <div class="col-md-4 mb-4 event-card" data-category="culture">
-                        <div class="card h-100">
-                            <img src="assets/img/Main/art_modern.jpeg" class="card-img-top" alt="فعالية">
-                            <div class="card-body">
-                                <span class="badge bg-primary mb-2">ثقافة</span>
-                                <h5 class="card-title">معرض الفن المعاصر</h5>
-                                <p class="card-text">📅 السبت، 20 أكتوبر 2025</p>
-                                <p class="card-text">📍 شمال المدينة</p>
-                                <p class="card-text">اكتشف أعمال فنية مبدعة من فنانين محليين وعالميين</p>
-                                <a href="event.html" class="btn btn-primary">التفاصيل</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-md-4 mb-4 event-card" data-category="sports">
-                        <div class="card h-100">
-                            <img src="assets/img/events/Marathon.jpeg" class="card-img-top" alt="فعالية">
-                            <div class="card-body">
-                                <span class="badge bg-success mb-2">رياضة</span>
-                                <h5 class="card-title">ماراثون المدينة السنوي</h5>
-                                <p class="card-text">📅 السبت، 27 أكتوبر 2025</p>
-                                <p class="card-text">📍 جنوب المدينة</p>
-                                <p class="card-text">شارك في السباق أو شجع المتسابقين في هذا الحدث الرياضي</p>
-                                <a href="event.html" class="btn btn-primary">التفاصيل</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-md-4 mb-4 event-card" data-category="family">
-                        <div class="card h-100">
-                            <img src="assets\img\Main\kitchen.png" class="card-img-top" alt="فعالية">
-                            <div class="card-body">
-                                <span class="badge bg-info mb-2">عائلي</span>
-                                <h5 class="card-title">ورشة طبخ للعائلات</h5>
-                                <p class="card-text">📅 الأحد، 28 أكتوبر 2025</p>
-                                <p class="card-text">📍 وسط المدينة</p>
-                                <p class="card-text">تعلم وصفات جديدة ولذيذة مع عائلتك</p>
-                                <a href="event.html" class="btn btn-primary">التفاصيل</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- يمكنك تكرار باقي الكروت بنفس المسار -->
-                </div>
-
-                <div id="noResults" class="text-center py-5" style="display:none;">
-                    <h3>لا توجد فعاليات مطابقة لبحثك</h3>
-                    <p>جرب تغيير الفلاتر أو البحث بكلمات مختلفة</p>
-                </div>
+            <div class="col-md-3 mb-3">
+              <select id="dateFilter" class="form-select">
+                <option value="all">جميع التواريخ</option>
+                <option value="today">اليوم</option>
+                <option value="week">هذا الأسبوع</option>
+                <option value="month">هذا الشهر</option>
+              </select>
             </div>
-        </section>
+            <div class="col-md-2 mb-3">
+              <select id="locationFilter" class="form-select">
+                <option value="all">جميع المواقع</option>
+                <option value="downtown">وسط المدينة</option>
+                <option value="north">الشمال</option>
+                <option value="south">الجنوب</option>
+              </select>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Events List -->
+      <section class="events-list py-5">
+        <div class="container">
+          <div class="row" id="eventsContainer">
+            <!-- Event Card (كلها بنفس الصورة) -->
+            <div class="col-md-4 mb-4 event-card" data-category="music">
+              <div class="card h-100">
+                <img
+                  src="assets/img/Main/music_event.jpeg"
+                  class="card-img-top"
+                  alt="فعالية"
+                />
+                <div class="card-body">
+                  <span class="badge bg-danger mb-2">موسيقى</span>
+                  <h5 class="card-title">مهرجان الموسيقى الصيفي</h5>
+                  <p class="card-text">📅 الجمعة، 25 أكتوبر 2025</p>
+                  <p class="card-text">📍 وسط المدينة</p>
+                  <p class="card-text">
+                    استمتع بأجمل الأمسيات الموسيقية مع فنانين محليين ودوليين
+                  </p>
+                  <a href="event.html" class="btn btn-primary">التفاصيل</a>
+                </div>
+              </div>
+            </div>
+
+            <!-- مكرر لنفس الصورة لكل كارد -->
+            <div class="col-md-4 mb-4 event-card" data-category="culture">
+              <div class="card h-100">
+                <img
+                  src="assets/img/Main/art_modern.jpeg"
+                  class="card-img-top"
+                  alt="فعالية"
+                />
+                <div class="card-body">
+                  <span class="badge bg-primary mb-2">ثقافة</span>
+                  <h5 class="card-title">معرض الفن المعاصر</h5>
+                  <p class="card-text">📅 السبت، 20 أكتوبر 2025</p>
+                  <p class="card-text">📍 شمال المدينة</p>
+                  <p class="card-text">
+                    اكتشف أعمال فنية مبدعة من فنانين محليين وعالميين
+                  </p>
+                  <a href="event.html" class="btn btn-primary">التفاصيل</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-4 mb-4 event-card" data-category="sports">
+              <div class="card h-100">
+                <img
+                  src="assets/img/events/Marathon.jpeg"
+                  class="card-img-top"
+                  alt="فعالية"
+                />
+                <div class="card-body">
+                  <span class="badge bg-success mb-2">رياضة</span>
+                  <h5 class="card-title">ماراثون المدينة السنوي</h5>
+                  <p class="card-text">📅 السبت، 27 أكتوبر 2025</p>
+                  <p class="card-text">📍 جنوب المدينة</p>
+                  <p class="card-text">
+                    شارك في السباق أو شجع المتسابقين في هذا الحدث الرياضي
+                  </p>
+                  <a href="event.html" class="btn btn-primary">التفاصيل</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-4 mb-4 event-card" data-category="family">
+              <div class="card h-100">
+                <img
+                  src="assets\img\Main\kitchen.png"
+                  class="card-img-top"
+                  alt="فعالية"
+                />
+                <div class="card-body">
+                  <span class="badge bg-info mb-2">عائلي</span>
+                  <h5 class="card-title">ورشة طبخ للعائلات</h5>
+                  <p class="card-text">📅 الأحد، 28 أكتوبر 2025</p>
+                  <p class="card-text">📍 وسط المدينة</p>
+                  <p class="card-text">تعلم وصفات جديدة ولذيذة مع عائلتك</p>
+                  <a href="event.html" class="btn btn-primary">التفاصيل</a>
+                </div>
+              </div>
+            </div>
+
+            <!-- يمكنك تكرار باقي الكروت بنفس المسار -->
+          </div>
+
+          <div id="noResults" class="text-center py-5" style="display: none">
+            <h3>لا توجد فعاليات مطابقة لبحثك</h3>
+            <p>جرب تغيير الفلاتر أو البحث بكلمات مختلفة</p>
+          </div>
+        </div>
+      </section>
     </main>
 
-    <!-- Footer -->
-    <footer class="bg-dark text-white py-4">
-        <div class="container text-center">
-            <p>&copy; 2025 دليل فعاليات المدينة. جميع الحقوق محفوظة.</p>
+    <!-- ProTeam Section -->
+    <section class="proteam-section">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-8">
+            <div class="proteam-card">
+              <img
+                src="assets/img/proteam-logo.svg"
+                alt="ProTeam Syria Logo"
+                class="proteam-logo"
+              />
+              <h2 class="proteam-title">مطور بواسطة ProTeam Syria</h2>
+              <p class="proteam-description">
+                نحن فريق محترف متخصص في تطوير المواقع والتطبيقات الإلكترونية
+                <br />
+                نقدم حلولاً تقنية مبتكرة لعملائنا في سوريا والوطن العربي
+              </p>
+              <a
+                href="https://proteam-syria.com"
+                target="_blank"
+                class="proteam-btn"
+              >
+                🌐 زيارة موقعنا الرسمي
+              </a>
+            </div>
+          </div>
         </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-5">
+      <div class="container">
+        <div class="row">
+          <!-- Contact Info -->
+          <div class="col-lg-3 col-md-6 mb-4 footer-col">
+            <h5>معلومات التواصل</h5>
+            <p><i>📧</i> البريد: info@cityevents.com</p>
+            <p><i>📞</i> الهاتف: 123-456-7890</p>
+            <p><i>📍</i> دمشق، سوريا</p>
+          </div>
+
+          <!-- Quick Links -->
+          <div class="col-lg-3 col-md-6 mb-4 footer-col">
+            <h5>روابط سريعة</h5>
+            <ul class="list-unstyled">
+              <li class="mb-2">
+                <a href="index.html" class="text-white">الرئيسية</a>
+              </li>
+              <li class="mb-2">
+                <a href="events.html" class="text-white">كل الفعاليات</a>
+              </li>
+              <li class="mb-2">
+                <a href="about.html" class="text-white">عن الدليل</a>
+              </li>
+              <li class="mb-2">
+                <a href="contact.html" class="text-white">اتصل بنا</a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Social Media -->
+          <div class="col-lg-3 col-md-6 mb-4 footer-col">
+            <h5>تابعنا</h5>
+            <div class="social-links">
+              <a
+                href="https://www.facebook.com/share/16ATHCTibk/"
+                target="_blank"
+                class="footer-social-icon text-white"
+              >
+                📘
+              </a>
+              <a
+                href="https://www.instagram.com/pro.team.syria?igsh=MWN2Zjd6YXI3a3Zoag=="
+                target="_blank"
+                class="footer-social-icon text-white"
+              >
+                📷
+              </a>
+              <a href="#" class="footer-social-icon text-white"> 🐦 </a>
+              <a href="#" class="footer-social-icon text-white"> 💬 </a>
+            </div>
+          </div>
+
+          <!-- Team Info -->
+          <div class="col-lg-3 col-md-6 mb-4 footer-col">
+            <h5>أعضاء الفريق</h5>
+            <p class="mb-1"><strong>محمد براء دندشلي</strong></p>
+            <p class="small text-muted mb-2">mhd_baraa_291066</p>
+            <p class="mb-1"><strong>ميس الريم صبيح</strong></p>
+            <p class="small text-muted mb-2">mais_alreem_289353</p>
+            <p class="mb-1"><strong>نور الهدى السعد</strong></p>
+            <p class="small text-muted">nour_al_houda_314844</p>
+          </div>
+        </div>
+
+        <hr class="bg-white my-4" />
+
+        <div class="row">
+          <div class="col-12 text-center">
+            <p class="mb-0">
+              &copy; 2025 دليل فعاليات المدينة. جميع الحقوق محفوظة.
+            </p>
+            <p class="small mt-2">
+              تم التطوير بواسطة
+              <a
+                href="https://proteam-syria.com"
+                target="_blank"
+                class="text-warning"
+                >ProTeam Syria</a
+              >
+            </p>
+          </div>
+        </div>
+      </div>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="assets/js/main.js"></script>
-</body>
+  </body>
 </html>

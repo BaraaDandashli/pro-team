@@ -1,299 +1,504 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>دليل فعاليات المدينة - الصفحة الرئيسية</title>
 
     <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
 
     <!-- Google Fonts - Arabic -->
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
 
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="assets/css/styles.css">
-</head>
-<body>
+    <link rel="stylesheet" href="assets/css/styles.css" />
+  </head>
+  <body>
     <!-- Header with Navbar -->
     <header>
-        <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-            <div class="container">
-                <!-- Logo and Site Name -->
-                <a class="navbar-brand" href="index.html">
-                    <strong>🎉 دليل فعاليات المدينة</strong>
-                </a>
+      <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
+        <div class="container">
+          <!-- Logo and Site Name -->
+          <a class="navbar-brand" href="index.html">
+            <strong>🎉 دليل فعاليات المدينة</strong>
+          </a>
 
-                <!-- Mobile Menu Button -->
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-label="القائمة">
-                    <span class="navbar-toggler-icon"></span>
+          <!-- Mobile Menu Button -->
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-label="القائمة"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <!-- Navigation Links -->
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto align-items-center">
+              <li class="nav-item">
+                <a class="nav-link active" href="index.html">الرئيسية</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="events.html">كل الفعاليات</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="about.html">عن الدليل</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="contact.html">اتصل بنا</a>
+              </li>
+              <li class="nav-item">
+                <button class="theme-toggle" id="themeToggle">
+                  🌙 وضع ليلي
                 </button>
-
-                <!-- Navigation Links -->
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav ms-auto">
-                        <li class="nav-item">
-                            <a class="nav-link active" href="index.html">الرئيسية</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="events.html">كل الفعاليات</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="about.html">عن الدليل</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="contact.html">اتصل بنا</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
+              </li>
+              <li class="nav-item dropdown language-switcher">
+                <button
+                  class="dropdown-toggle"
+                  type="button"
+                  id="currentLang"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  🇸🇾 العربية
+                </button>
+                <ul class="dropdown-menu dropdown-menu-end">
+                  <li>
+                    <a class="dropdown-item lang-switch" href="#" data-lang="ar"
+                      >🇸🇾 العربية</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item lang-switch" href="#" data-lang="en"
+                      >🇬🇧 English</a
+                    >
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
     </header>
 
     <!-- Main Content -->
     <main>
-        <!-- Hero Section with Featured Events Slider -->
-        <section class="hero-section py-5 bg-light">
-            <div class="container">
-                <h1 class="text-center mb-4">فعاليات بارزة هذا الأسبوع</h1>
+      <!-- Hero Section with Featured Events Slider -->
+      <section class="hero-section py-5 bg-light">
+        <div class="container">
+          <h1 class="text-center mb-4">فعاليات بارزة هذا الأسبوع</h1>
 
-                <!-- Slider for Featured Events -->
-                <div id="featuredSlider" class="carousel slide" data-bs-ride="carousel">
-                    <!-- Indicators -->
-                    <div class="carousel-indicators">
-                        <button type="button" data-bs-target="#featuredSlider" data-bs-slide-to="0" class="active" aria-label="الفعالية 1"></button>
-                        <button type="button" data-bs-target="#featuredSlider" data-bs-slide-to="1" aria-label="الفعالية 2"></button>
-                        <button type="button" data-bs-target="#featuredSlider" data-bs-slide-to="2" aria-label="الفعالية 3"></button>
-                    </div>
-
-                    <div class="carousel-inner">
-                        <!-- Slide 1 -->
-                        <div class="carousel-item active">
-                            <div class="card">
-                                <img src="assets\img\Main\music_event.jpeg" class="card-img-top" alt="مهرجان الموسيقى">
-                                <div class="card-body">
-                                    <h3 class="card-title">مهرجان الموسيقى الصيفي</h3>
-                                    <p class="card-text">استمتع بأجمل الأمسيات الموسيقية مع فنانين محليين</p>
-                                    <a href="event.html" class="btn btn-primary">التفاصيل</a>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Slide 2 -->
-                        <div class="carousel-item">
-                            <div class="card">
-                                <img src="assets\img\Main\art_modern.jpeg" class="card-img-top" alt="معرض الفن">
-                                <div class="card-body">
-                                    <h3 class="card-title">معرض الفن المعاصر</h3>
-                                    <p class="card-text">اكتشف أعمال فنية مبدعة من فنانين محليين وعالميين</p>
-                                    <a href="event.html" class="btn btn-primary">التفاصيل</a>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Slide 3 -->
-                        <div class="carousel-item">
-                            <div class="card">
-                                <img src="assets\img\Main\football.jpg" class="card-img-top" alt="مباراة كرة قدم">
-                                <div class="card-body">
-                                    <h3 class="card-title">مباراة كرة القدم المحلية</h3>
-                                    <p class="card-text">شجع فريقك المفضل في مباراة مثيرة</p>
-                                    <a href="event.html" class="btn btn-primary">التفاصيل</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Slider Controls -->
-                    <button class="carousel-control-prev" type="button" data-bs-target="#featuredSlider" data-bs-slide="prev" aria-label="السابق">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    </button>
-                    <button class="carousel-control-next" type="button" data-bs-target="#featuredSlider" data-bs-slide="next" aria-label="التالي">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    </button>
-                </div>
+          <!-- Slider for Featured Events -->
+          <div
+            id="featuredSlider"
+            class="carousel slide"
+            data-bs-ride="carousel"
+          >
+            <!-- Indicators -->
+            <div class="carousel-indicators">
+              <button
+                type="button"
+                data-bs-target="#featuredSlider"
+                data-bs-slide-to="0"
+                class="active"
+                aria-label="الفعالية 1"
+              ></button>
+              <button
+                type="button"
+                data-bs-target="#featuredSlider"
+                data-bs-slide-to="1"
+                aria-label="الفعالية 2"
+              ></button>
+              <button
+                type="button"
+                data-bs-target="#featuredSlider"
+                data-bs-slide-to="2"
+                aria-label="الفعالية 3"
+              ></button>
             </div>
-        </section>
 
-        <!-- Quick Categories Section -->
-        <section class="categories-section py-5">
-            <div class="container">
-                <h2 class="text-center mb-4">تصنيفات سريعة</h2>
-                <div class="row text-center">
-                    <div class="col-md-3 col-6 mb-3">
-                        <button class="btn btn-outline-primary btn-lg w-100 category-btn" data-category="culture">
-                             ثقافة
-                        </button>
-                    </div>
-                    <div class="col-md-3 col-6 mb-3">
-                        <button class="btn btn-outline-success btn-lg w-100 category-btn" data-category="sports">
-                             رياضة
-                        </button>
-                    </div>
-                    <div class="col-md-3 col-6 mb-3">
-                        <button class="btn btn-outline-danger btn-lg w-100 category-btn" data-category="music">
-                            موسيقى
-                        </button>
-                    </div>
-                    <div class="col-md-3 col-6 mb-3">
-                        <button class="btn btn-outline-info btn-lg w-100 category-btn" data-category="family">
-                            عائلي
-                        </button>
-                    </div>
+            <div class="carousel-inner">
+              <!-- Slide 1 -->
+              <div class="carousel-item active">
+                <div class="card">
+                  <img
+                    src="assets\img\Main\music_event.jpeg"
+                    class="card-img-top"
+                    alt="مهرجان الموسيقى"
+                  />
+                  <div class="card-body">
+                    <h3 class="card-title">مهرجان الموسيقى الصيفي</h3>
+                    <p class="card-text">
+                      استمتع بأجمل الأمسيات الموسيقية مع فنانين محليين
+                    </p>
+                    <a href="event.html" class="btn btn-primary">التفاصيل</a>
+                  </div>
                 </div>
+              </div>
+
+              <!-- Slide 2 -->
+              <div class="carousel-item">
+                <div class="card">
+                  <img
+                    src="assets\img\Main\art_modern.jpeg"
+                    class="card-img-top"
+                    alt="معرض الفن"
+                  />
+                  <div class="card-body">
+                    <h3 class="card-title">معرض الفن المعاصر</h3>
+                    <p class="card-text">
+                      اكتشف أعمال فنية مبدعة من فنانين محليين وعالميين
+                    </p>
+                    <a href="event.html" class="btn btn-primary">التفاصيل</a>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Slide 3 -->
+              <div class="carousel-item">
+                <div class="card">
+                  <img
+                    src="assets\img\Main\football.jpg"
+                    class="card-img-top"
+                    alt="مباراة كرة قدم"
+                  />
+                  <div class="card-body">
+                    <h3 class="card-title">مباراة كرة القدم المحلية</h3>
+                    <p class="card-text">شجع فريقك المفضل في مباراة مثيرة</p>
+                    <a href="event.html" class="btn btn-primary">التفاصيل</a>
+                  </div>
+                </div>
+              </div>
             </div>
-        </section>
 
-        <!-- Latest Events Section -->
-        <section class="latest-events py-5 bg-light">
-            <div class="container">
-                <h2 class="text-center mb-4">أحدث الفعاليات</h2>
-                <div class="row" id="latestEvents">
-                    <!-- Event Card 1 -->
-                    <div class="col-md-4 mb-4">
-                        <div class="card h-100">
-                            <img src="assets\img\Main\kitchen.png" class="card-img-top" alt="ورشة طبخ">
-                            <div class="card-body">
-                                <span class="badge bg-info mb-2">عائلي</span>
-                                <h5 class="card-title">ورشة طبخ للعائلات</h5>
-                                <p class="card-text">📅 السبت، 20 أكتوبر 2025</p>
-                                <p class="card-text">📍 مركز المدينة الثقافي</p>
-                                <p class="card-text">تعلم وصفات جديدة مع عائلتك</p>
-                                <a href="event.html" class="btn btn-primary">التفاصيل</a>
-                            </div>
-                        </div>
-                    </div>
+            <!-- Slider Controls -->
+            <button
+              class="carousel-control-prev"
+              type="button"
+              data-bs-target="#featuredSlider"
+              data-bs-slide="prev"
+              aria-label="السابق"
+            >
+              <span
+                class="carousel-control-prev-icon"
+                aria-hidden="true"
+              ></span>
+            </button>
+            <button
+              class="carousel-control-next"
+              type="button"
+              data-bs-target="#featuredSlider"
+              data-bs-slide="next"
+              aria-label="التالي"
+            >
+              <span
+                class="carousel-control-next-icon"
+                aria-hidden="true"
+              ></span>
+            </button>
+          </div>
+        </div>
+      </section>
 
-                    <!-- Event Card 2 -->
-                    <div class="col-md-4 mb-4">
-                        <div class="card h-100">
-                            <img src="assets\img\Main\Ai-ws.png" class="card-img-top" alt="محاضرة">
-                            <div class="card-body">
-                                <span class="badge bg-primary mb-2">ثقافة</span>
-                                <h5 class="card-title">محاضرة عن الذكاء الاصطناعي</h5>
-                                <p class="card-text">📅 الأحد، 21 أكتوبر 2025</p>
-                                <p class="card-text">📍 جامعة المدينة</p>
-                                <p class="card-text">استكشف عالم التكنولوجيا الحديثة</p>
-                                <a href="event.html" class="btn btn-primary">التفاصيل</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Event Card 3 -->
-                    <div class="col-md-4 mb-4">
-                        <div class="card h-100">
-                            <img src="assets\img\Main\music_event.jpeg" class="card-img-top" alt="حفل موسيقي">
-                            <div class="card-body">
-                                <span class="badge bg-danger mb-2">موسيقى</span>
-                                <h5 class="card-title">حفل موسيقي مباشر</h5>
-                                <p class="card-text">📅 الجمعة، 25 أكتوبر 2025</p>
-                                <p class="card-text">📍 مسرح المدينة</p>
-                                <p class="card-text">أمسية موسيقية رائعة مع فرقة محلية</p>
-                                <a href="event.html" class="btn btn-primary">التفاصيل</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Event Card 4 -->
-                    <div class="col-md-4 mb-4">
-                        <div class="card h-100">
-                            <img src="assets\img\events/Marathon.jpeg" class="card-img-top" alt="ماراثون">
-                            <div class="card-body">
-                                <span class="badge bg-success mb-2">رياضة</span>
-                                <h5 class="card-title">ماراثون المدينة السنوي</h5>
-                                <p class="card-text">📅 السبت، 27 أكتوبر 2025</p>
-                                <p class="card-text">📍 شارع الكورنيش</p>
-                                <p class="card-text">شارك في السباق أو شجع المتسابقين</p>
-                                <a href="event.html" class="btn btn-primary">التفاصيل</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Event Card 5 -->
-                    <div class="col-md-4 mb-4">
-                        <div class="card h-100">
-                            <img src="assets\img\Main\children-ws.png" class="card-img-top" alt="مسرحية">
-                            <div class="card-body">
-                                <span class="badge bg-info mb-2">عائلي</span>
-                                <h5 class="card-title">مسرحية للأطفال</h5>
-                                <p class="card-text">📅 الأحد، 28 أكتوبر 2025</p>
-                                <p class="card-text">📍 مسرح الأطفال</p>
-                                <p class="card-text">عرض مسرحي ممتع لجميع الأعمار</p>
-                                <a href="event.html" class="btn btn-primary">التفاصيل</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Event Card 6 -->
-                    <div class="col-md-4 mb-4">
-                        <div class="card h-100">
-                            <img src="assets\img\Main\books.png" class="card-img-top" alt="معرض كتب">
-                            <div class="card-body">
-                                <span class="badge bg-primary mb-2">ثقافة</span>
-                                <h5 class="card-title">معرض الكتاب السنوي</h5>
-                                <p class="card-text">📅 الاثنين، 29 أكتوبر 2025</p>
-                                <p class="card-text">📍 قاعة المعارض</p>
-                                <p class="card-text">اكتشف أحدث الإصدارات الأدبية</p>
-                                <a href="event.html" class="btn btn-primary">التفاصيل</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Button to see all events -->
-                <div class="text-center mt-4">
-                    <a href="events.html" class="btn btn-primary btn-lg">عرض جميع الفعاليات</a>
-                </div>
+      <!-- Quick Categories Section -->
+      <section class="categories-section py-5">
+        <div class="container">
+          <h2 class="text-center mb-4">تصنيفات سريعة</h2>
+          <div class="row text-center">
+            <div class="col-md-3 col-6 mb-3">
+              <button
+                class="btn btn-outline-primary btn-lg w-100 category-btn"
+                data-category="culture"
+              >
+                ثقافة
+              </button>
             </div>
-        </section>
+            <div class="col-md-3 col-6 mb-3">
+              <button
+                class="btn btn-outline-success btn-lg w-100 category-btn"
+                data-category="sports"
+              >
+                رياضة
+              </button>
+            </div>
+            <div class="col-md-3 col-6 mb-3">
+              <button
+                class="btn btn-outline-danger btn-lg w-100 category-btn"
+                data-category="music"
+              >
+                موسيقى
+              </button>
+            </div>
+            <div class="col-md-3 col-6 mb-3">
+              <button
+                class="btn btn-outline-info btn-lg w-100 category-btn"
+                data-category="family"
+              >
+                عائلي
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Latest Events Section -->
+      <section class="latest-events py-5 bg-light">
+        <div class="container">
+          <h2 class="text-center mb-4">أحدث الفعاليات</h2>
+          <div class="row" id="latestEvents">
+            <!-- Event Card 1 -->
+            <div class="col-md-4 mb-4">
+              <div class="card h-100">
+                <img
+                  src="assets\img\Main\kitchen.png"
+                  class="card-img-top"
+                  alt="ورشة طبخ"
+                />
+                <div class="card-body">
+                  <span class="badge bg-info mb-2">عائلي</span>
+                  <h5 class="card-title">ورشة طبخ للعائلات</h5>
+                  <p class="card-text">📅 السبت، 20 أكتوبر 2025</p>
+                  <p class="card-text">📍 مركز المدينة الثقافي</p>
+                  <p class="card-text">تعلم وصفات جديدة مع عائلتك</p>
+                  <a href="event.html" class="btn btn-primary">التفاصيل</a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Event Card 2 -->
+            <div class="col-md-4 mb-4">
+              <div class="card h-100">
+                <img
+                  src="assets\img\Main\Ai-ws.png"
+                  class="card-img-top"
+                  alt="محاضرة"
+                />
+                <div class="card-body">
+                  <span class="badge bg-primary mb-2">ثقافة</span>
+                  <h5 class="card-title">محاضرة عن الذكاء الاصطناعي</h5>
+                  <p class="card-text">📅 الأحد، 21 أكتوبر 2025</p>
+                  <p class="card-text">📍 جامعة المدينة</p>
+                  <p class="card-text">استكشف عالم التكنولوجيا الحديثة</p>
+                  <a href="event.html" class="btn btn-primary">التفاصيل</a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Event Card 3 -->
+            <div class="col-md-4 mb-4">
+              <div class="card h-100">
+                <img
+                  src="assets\img\Main\music_event.jpeg"
+                  class="card-img-top"
+                  alt="حفل موسيقي"
+                />
+                <div class="card-body">
+                  <span class="badge bg-danger mb-2">موسيقى</span>
+                  <h5 class="card-title">حفل موسيقي مباشر</h5>
+                  <p class="card-text">📅 الجمعة، 25 أكتوبر 2025</p>
+                  <p class="card-text">📍 مسرح المدينة</p>
+                  <p class="card-text">أمسية موسيقية رائعة مع فرقة محلية</p>
+                  <a href="event.html" class="btn btn-primary">التفاصيل</a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Event Card 4 -->
+            <div class="col-md-4 mb-4">
+              <div class="card h-100">
+                <img
+                  src="assets\img\events/Marathon.jpeg"
+                  class="card-img-top"
+                  alt="ماراثون"
+                />
+                <div class="card-body">
+                  <span class="badge bg-success mb-2">رياضة</span>
+                  <h5 class="card-title">ماراثون المدينة السنوي</h5>
+                  <p class="card-text">📅 السبت، 27 أكتوبر 2025</p>
+                  <p class="card-text">📍 شارع الكورنيش</p>
+                  <p class="card-text">شارك في السباق أو شجع المتسابقين</p>
+                  <a href="event.html" class="btn btn-primary">التفاصيل</a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Event Card 5 -->
+            <div class="col-md-4 mb-4">
+              <div class="card h-100">
+                <img
+                  src="assets\img\Main\children-ws.png"
+                  class="card-img-top"
+                  alt="مسرحية"
+                />
+                <div class="card-body">
+                  <span class="badge bg-info mb-2">عائلي</span>
+                  <h5 class="card-title">مسرحية للأطفال</h5>
+                  <p class="card-text">📅 الأحد، 28 أكتوبر 2025</p>
+                  <p class="card-text">📍 مسرح الأطفال</p>
+                  <p class="card-text">عرض مسرحي ممتع لجميع الأعمار</p>
+                  <a href="event.html" class="btn btn-primary">التفاصيل</a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Event Card 6 -->
+            <div class="col-md-4 mb-4">
+              <div class="card h-100">
+                <img
+                  src="assets\img\Main\books.png"
+                  class="card-img-top"
+                  alt="معرض كتب"
+                />
+                <div class="card-body">
+                  <span class="badge bg-primary mb-2">ثقافة</span>
+                  <h5 class="card-title">معرض الكتاب السنوي</h5>
+                  <p class="card-text">📅 الاثنين، 29 أكتوبر 2025</p>
+                  <p class="card-text">📍 قاعة المعارض</p>
+                  <p class="card-text">اكتشف أحدث الإصدارات الأدبية</p>
+                  <a href="event.html" class="btn btn-primary">التفاصيل</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Button to see all events -->
+          <div class="text-center mt-4">
+            <a href="events.html" class="btn btn-primary btn-lg"
+              >عرض جميع الفعاليات</a
+            >
+          </div>
+        </div>
+      </section>
     </main>
 
-    <!-- Footer -->
-    <footer class="bg-dark text-white py-4">
-        <div class="container">
-            <div class="row">
-                <!-- Contact Info -->
-                <div class="col-md-4 mb-3">
-                    <h5>معلومات التواصل</h5>
-                    <p>📧 البريد: info@cityevents.com</p>
-                    <p>📞 الهاتف: 123-456-7890</p>
-                </div>
-
-                <!-- Quick Links -->
-                <div class="col-md-4 mb-3">
-                    <h5>روابط سريعة</h5>
-                    <ul class="list-unstyled">
-                        <li><a href="index.html" class="text-white">الرئيسية</a></li>
-                        <li><a href="events.html" class="text-white">كل الفعاليات</a></li>
-                        <li><a href="about.html" class="text-white">عن الدليل</a></li>
-                        <li><a href="contact.html" class="text-white">اتصل بنا</a></li>
-                    </ul>
-                </div>
-
-                <!-- Social Media -->
-                <div class="col-md-4 mb-3">
-                    <h5>تابعنا</h5>
-                    <div class="social-links">
-                        <a href="https://www.facebook.com/share/16ATHCTibk/" class="text-white me-3">فيسبوك</a>
-                        <a href="https://www.instagram.com/pro.team.syria?igsh=MWN2Zjd6YXI3a3Zoag==" class="text-white">انستجرام</a>
-                    </div>
-                </div>
+    <!-- ProTeam Section -->
+    <section class="proteam-section">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-8">
+            <div class="proteam-card">
+              <img
+                src="assets/img/proteam-d-logo.svg"
+                alt="ProTeam Syria Logo"
+                class="proteam-logo"
+              />
+              <h2 class="proteam-title">مطور بواسطة فريق برو</h2>
+                <br />
+              <p class="proteam-description">
+                نحن فريق من الطلاب, نعمل على نشر الثقافة التقنية بين الطلاب في سوريا
+                <br />
+                 من خلال ورش العمل التفاعلية والمشاريع الجماعية وتجارب التعلم العملية
+                <br />
+                <br />
+                و نقدم حلولاً تقنية مبتكرة لعملائنا في سوريا والوطن العربي
+              </p>
+              <a
+                href="https://proteam-syria.com"
+                target="_blank"
+                class="proteam-btn"
+              >
+                🌐 زيارة موقعنا الرسمي
+              </a>
             </div>
-
-            <hr class="bg-white">
-
-            <!-- Student Info - IMPORTANT FOR PROJECT -->
-            <div class="text-center mb-3">
-                <p><strong>أعضاء الفريق:</strong></p>
-                <p>mhd_baraa_291066</p>
-                <p>mais_alreem_289353</p>
-                <p></p>nour_al_houda_314844</p>
-            </div>
-
-            <div class="text-center">
-                <p>&copy; 2025 دليل فعاليات المدينة. جميع الحقوق محفوظة.</p>
-            </div>
+          </div>
         </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-5">
+      <div class="container">
+        <div class="row">
+          <!-- Contact Info -->
+          <div class="col-lg-3 col-md-6 mb-4 footer-col">
+            <h5>معلومات التواصل</h5>
+            <p><i>📧</i> البريد: info@cityevents.com</p>
+            <p><i>📞</i> الهاتف: 123-456-7890</p>
+            <p><i>📍</i> دمشق، سوريا</p>
+          </div>
+
+          <!-- Quick Links -->
+          <div class="col-lg-3 col-md-6 mb-4 footer-col">
+            <h5>روابط سريعة</h5>
+            <ul class="list-unstyled">
+              <li class="mb-2">
+                <a href="index.html" class="text-white">الرئيسية</a>
+              </li>
+              <li class="mb-2">
+                <a href="events.html" class="text-white">كل الفعاليات</a>
+              </li>
+              <li class="mb-2">
+                <a href="about.html" class="text-white">عن الدليل</a>
+              </li>
+              <li class="mb-2">
+                <a href="contact.html" class="text-white">اتصل بنا</a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Social Media -->
+          <div class="col-lg-3 col-md-6 mb-4 footer-col">
+            <h5>تابعنا</h5>
+            <div class="social-links">
+              <a
+                href="https://www.facebook.com/share/16ATHCTibk/"
+                target="_blank"
+                class="footer-social-icon text-white"
+              >
+                📘
+              </a>
+              <a
+                href="https://www.instagram.com/pro.team.syria?igsh=MWN2Zjd6YXI3a3Zoag=="
+                target="_blank"
+                class="footer-social-icon text-white"
+              >
+                📷
+              </a>
+              <a href="#" class="footer-social-icon text-white"> 🐦 </a>
+              <a href="#" class="footer-social-icon text-white"> 💬 </a>
+            </div>
+          </div>
+
+          <!-- Team Info -->
+          <div class="col-lg-3 col-md-6 mb-4 footer-col">
+            <h5>أعضاء الفريق</h5>
+            <p class="mb-1"><strong>محمد براء دندشلي</strong></p>
+            <p class="small text-muted mb-2">mhd_baraa_291066</p>
+            <p class="mb-1"><strong>ميس الريم صبيح</strong></p>
+            <p class="small text-muted mb-2">mais_alreem_289353</p>
+            <p class="mb-1"><strong>نور الهدى السعد</strong></p>
+            <p class="small text-muted">nour_al_houda_314844</p>
+          </div>
+        </div>
+
+        <hr class="bg-white my-4" />
+
+        <div class="row">
+          <div class="col-12 text-center">
+            <p class="mb-0">
+              &copy; 2025 دليل فعاليات المدينة. جميع الحقوق محفوظة.
+            </p>
+            <p class="small mt-2">
+              تم التطوير بواسطة
+              <a
+                href="https://proteam-syria.com"
+                target="_blank"
+                class="text-warning"
+                >ProTeam Syria</a
+              >
+            </p>
+          </div>
+        </div>
+      </div>
     </footer>
 
     <!-- Bootstrap JS -->
@@ -301,5 +506,5 @@
 
     <!-- Custom JavaScript -->
     <script src="assets/js/main.js"></script>
-</body>
+  </body>
 </html>
