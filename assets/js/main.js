@@ -1,11 +1,5 @@
-// ملف JavaScript - دليل فعاليات المدينة
-// مهد براء - ميس الريم - نور الهدى
-
-// تشغيل الكود بعد تحميل الصفحة
 document.addEventListener("DOMContentLoaded", function () {
   console.log("تم تحميل الموقع بنجاح");
-
-  // تشغيل الوظائف
   initializeTheme();
   initializeLanguage();
   setupThemeToggle();
@@ -16,7 +10,6 @@ document.addEventListener("DOMContentLoaded", function () {
   setupEventButtons();
 });
 
-// تهيئة الثيم من localStorage
 function initializeTheme() {
   const savedTheme = localStorage.getItem("theme") || "light";
   if (savedTheme === "dark") {
@@ -25,7 +18,6 @@ function initializeTheme() {
   updateThemeIcon();
 }
 
-// تهيئة اللغة من localStorage
 function initializeLanguage() {
   const savedLang = localStorage.getItem("language") || "ar";
   if (savedLang === "en") {
@@ -34,7 +26,6 @@ function initializeLanguage() {
   updateLanguageDisplay();
 }
 
-// إعداد زر تبديل الثيم
 function setupThemeToggle() {
   const themeToggle = document.getElementById("themeToggle");
   if (themeToggle) {
@@ -49,7 +40,6 @@ function setupThemeToggle() {
   }
 }
 
-// تحديث أيقونة الثيم
 function updateThemeIcon() {
   const themeToggle = document.getElementById("themeToggle");
   if (themeToggle) {
@@ -58,7 +48,6 @@ function updateThemeIcon() {
   }
 }
 
-// إعداد مبدل اللغة
 function setupLanguageSwitcher() {
   const langButtons = document.querySelectorAll(".lang-switch");
   langButtons.forEach(function (btn) {
@@ -70,7 +59,6 @@ function setupLanguageSwitcher() {
   });
 }
 
-// تبديل اللغة
 function switchLanguage(lang) {
   localStorage.setItem("language", lang);
   if (lang === "en") {
@@ -81,7 +69,6 @@ function switchLanguage(lang) {
   updateLanguageDisplay();
 }
 
-// تحديث عرض اللغة
 function updateLanguageDisplay() {
   const langDisplay = document.getElementById("currentLang");
   const currentLang = localStorage.getItem("language") || "ar";
@@ -91,12 +78,10 @@ function updateLanguageDisplay() {
   }
 }
 
-// ترجمة إلى الإنجليزية
 function translateToEnglish() {
   document.documentElement.setAttribute("lang", "en");
   document.documentElement.setAttribute("dir", "ltr");
 
-  // ترجمة عناصر الصفحة الأساسية
   const translations = {
     "دليل فعاليات المدينة": "City Events Guide",
     الرئيسية: "Home",
@@ -119,11 +104,9 @@ function translateToEnglish() {
     "أعضاء الفريق": "Team Members",
   };
 
-  // تطبيق الترجمات
   applyTranslations(translations);
 }
 
-// ترجمة إلى العربية
 function translateToArabic() {
   document.documentElement.setAttribute("lang", "ar");
   document.documentElement.setAttribute("dir", "rtl");
@@ -153,7 +136,6 @@ function translateToArabic() {
   applyTranslations(translations);
 }
 
-// تطبيق الترجمات
 function applyTranslations(translations) {
   Object.keys(translations).forEach(function (key) {
     const elements = document.querySelectorAll("*");
@@ -171,7 +153,6 @@ function applyTranslations(translations) {
   });
 }
 
-// وظيفة أزرار التصنيفات في الصفحة الرئيسية
 function setupCategoryButtons() {
   var categoryBtns = document.querySelectorAll(".category-btn");
 
@@ -183,7 +164,6 @@ function setupCategoryButtons() {
     });
   });
 
-  // إذا كنا في صفحة الفعاليات
   if (window.location.pathname.includes("events.html")) {
     var savedCategory = localStorage.getItem("selectedCategory");
     if (savedCategory) {
@@ -197,7 +177,6 @@ function setupCategoryButtons() {
   }
 }
 
-// وظيفة فلترة الفعاليات
 function setupEventFilters() {
   var searchInput = document.getElementById("searchInput");
   var categoryFilter = document.getElementById("categoryFilter");
@@ -221,7 +200,6 @@ function setupEventFilters() {
   }
 }
 
-// تصفية الفعاليات
 function filterEvents() {
   var searchText = document.getElementById("searchInput").value.toLowerCase();
   var category = document.getElementById("categoryFilter").value;
@@ -237,22 +215,18 @@ function filterEvents() {
 
     var showCard = true;
 
-    // فلتر البحث
     if (searchText && !cardText.includes(searchText)) {
       showCard = false;
     }
 
-    // فلتر التصنيف
     if (category !== "all" && cardCategory !== category) {
       showCard = false;
     }
 
-    // فلتر الموقع
     if (location !== "all" && cardLocation !== location) {
       showCard = false;
     }
 
-    // إظهار أو إخفاء البطاقة
     if (showCard) {
       card.style.display = "block";
       visibleCount++;
@@ -261,7 +235,6 @@ function filterEvents() {
     }
   });
 
-  // رسالة لا توجد نتائج
   var noResults = document.getElementById("noResults");
   if (noResults) {
     if (visibleCount === 0) {
@@ -272,7 +245,6 @@ function filterEvents() {
   }
 }
 
-// التحقق من نموذج التواصل
 function setupContactForm() {
   var contactForm = document.getElementById("contactForm");
 
@@ -292,7 +264,6 @@ function setupContactForm() {
   });
 }
 
-// التحقق من البيانات
 function validateForm() {
   var name = document.getElementById("name").value.trim();
   var email = document.getElementById("email").value.trim();
@@ -301,7 +272,6 @@ function validateForm() {
 
   var valid = true;
 
-  // التحقق من الاسم
   if (name.length < 3) {
     document.getElementById("name").classList.add("is-invalid");
     valid = false;
@@ -309,7 +279,6 @@ function validateForm() {
     document.getElementById("name").classList.remove("is-invalid");
   }
 
-  // التحقق من البريد الإلكتروني
   var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   if (!emailPattern.test(email)) {
     document.getElementById("email").classList.add("is-invalid");
@@ -318,7 +287,6 @@ function validateForm() {
     document.getElementById("email").classList.remove("is-invalid");
   }
 
-  // التحقق من الموضوع
   if (!subject) {
     document.getElementById("subject").classList.add("is-invalid");
     valid = false;
@@ -326,7 +294,6 @@ function validateForm() {
     document.getElementById("subject").classList.remove("is-invalid");
   }
 
-  // التحقق من الرسالة
   if (message.length < 10) {
     document.getElementById("message").classList.add("is-invalid");
     valid = false;
@@ -337,7 +304,6 @@ function validateForm() {
   return valid;
 }
 
-// عرض رسائل التنبيه
 function showMessage(type, text) {
   var alertDiv = document.getElementById("formAlerts");
 
@@ -356,7 +322,6 @@ function showMessage(type, text) {
 
   alertDiv.innerHTML = alertHTML;
 
-  // إخفاء الرسالة بعد 5 ثواني
   setTimeout(function () {
     var alert = alertDiv.querySelector(".alert");
     if (alert) {
@@ -365,9 +330,7 @@ function showMessage(type, text) {
   }, 5000);
 }
 
-// أزرار صفحة تفاصيل الفعالية
 function setupEventButtons() {
-  // زر إضافة للتقويم
   var addCalendarBtn = document.getElementById("addToCalendar");
   if (addCalendarBtn) {
     addCalendarBtn.addEventListener("click", function () {
@@ -375,7 +338,6 @@ function setupEventButtons() {
     });
   }
 
-  // زر المشاركة
   var shareBtn = document.getElementById("shareEvent");
   if (shareBtn) {
     shareBtn.addEventListener("click", function () {
@@ -395,7 +357,6 @@ function setupEventButtons() {
     });
   }
 
-  // زر تأكيد الحجز
   var confirmBtn = document.getElementById("confirmBooking");
   if (confirmBtn) {
     confirmBtn.addEventListener("click", function () {
@@ -416,5 +377,4 @@ function setupEventButtons() {
   }
 }
 
-// رسالة في الكونسول
 console.log("دليل فعاليات المدينة - BWP401");
